@@ -13,12 +13,12 @@ $("#com-topbar  .drop").mouseout(function(){
     });
 });
 
-/*导航 更多下拉*/
+/*导航 更多 下拉*/
 $("#def-nav .drop").mouseover(function(){
     $("#def-nav .down").css({
         "display":"block",
-        "top":"193px",
-        "left":"570px"
+        "top":"45px",
+        "left":"-32px"
     });
 });
 $("#def-nav .drop").mouseout(function(){
@@ -38,6 +38,24 @@ function scrollGun(){
         _this.css({marginTop:0});
     });
 }
+/*定时器*/
+var baindex = 0;
 setInterval(function(){
     scrollGun();
 },2000);
+
+/*二级菜单 样式待改*/
+$(".sec_menu").find("li").on("mouseover",function(){
+    var pre = $($(".sec_menu .list")[0]).prev();
+    pre.css({"border":"none"});
+    $(this).find("div").find("i").removeClass("corner1").addClass("corner2");
+    //$(".sec_menu .list").find(".list_cont").append("<div class='.menuBorder'></div>");
+    $(".sec_menu .list").removeClass("active"), $(this).addClass("active"), $(this).children(".thir_menu").show();
+});
+$(".sec_menu").find("li").on("mouseout",function(){
+    $(this).find("div").find("i").removeClass("corner2").addClass("corner1");
+    //$(".sec_menu .list").find(".list_cont").remove("<div class='.menuBorder'></div>");
+    $(".sec_menu .list").removeClass("active"), $(this).removeClass("active"), $(this).children(".thir_menu").hide();
+})
+
+/*轮播图*/

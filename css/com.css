@@ -262,7 +262,7 @@ h1{
 	height: 20px;
 	line-height: 20px;
 	width: 800px;
-	/*overflow: hidden;*/
+	overflow: hidden;
 }
 #com-foot .link-slide a{
 	padding-left: 5px;
