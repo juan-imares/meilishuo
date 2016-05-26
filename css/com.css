@@ -1,0 +1,276 @@
+
+#com-topbar{
+	width: 100%;
+	height: 31px;
+	border-bottom: 1px solid #eee;
+}
+.inner{
+	width: 1200px;
+	margin: 0 auto;
+}
+#com-topbar ul{
+	width: 860px;
+	float: right;
+	line-height: 30px;
+}
+#com-topbar li{
+	float: left;
+	background: url(../img/border/border.png) no-repeat right center;
+	padding: 0 15px;
+}
+#com-topbar li a:hover{
+	color: #f69;
+}
+/*下载客户端*/
+#com-topbar .app {
+    text-align: left;
+    width: 240px;
+    padding-top: 5px;
+}
+#com-topbar .down {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    z-index: 999;
+    background-color: #fff;
+    padding: 5px 10px;
+    border: 1px solid #eee;
+    line-height: 20px;
+    display: none;
+}
+#com-topbar .app li img{
+	float: left;
+	padding-right: 10px;
+	width: 70px;
+	height: 70px;
+}
+#com-topbar .app li {
+    text-align: left;
+    width: 240px;
+    padding-top: 5px;
+    background: none;
+}
+#com-topbar .app .client {
+    font-size: 14px;
+    color: #f69;
+}
+h1{
+	width: 360px;
+	float: left;
+	margin-top: 40px;
+}
+.search{
+	width: 45%;
+	float: left;
+	margin-top: 30px;
+	height: 90px;
+}
+.search form{
+	position: relative;
+}
+.search-tab span{
+	display: block;
+	float: left;
+	color: #666;
+	width: 56px;
+	height: 24px;
+	text-align: center;
+	line-height: 24px;
+	background: #f2f2f2;
+	cursor: pointer;
+}
+.search-tab span.active{
+	color: #fff;
+	background: #f69;
+}
+.search-box .search-txt{
+	border: 2px solid #f69;
+	width: 82%;
+	height: 26px;
+	padding-left: 5px;
+}
+.search-box input{
+	float: left;
+	margin-bottom: 3px;
+}
+.search-box .search-btn{
+	border: none;
+	background: #f69;
+	width: 12%;
+	height: 32px;
+	padding-left: 5px;
+	color: #fff;
+	cursor: pointer;
+}
+/*search 放大镜*/
+.searchIcon{
+	color: #fff;
+	font-size: 20px;
+	position: absolute;
+	top: 31px;
+	left: 475px;
+	cursor: pointer;
+}
+.weixin{
+	font-size: 14px;
+	color: #84c35b;
+}
+.qq{
+	font-size: 14px;
+	color: #e82c20;
+}
+.cart{
+	font-size: 14px;
+	color: #ff6497;
+	margin-right: 4px;
+}
+.cart-num{
+	padding: 1px 6px;
+	background: #ff6497;
+	color: #fff;
+}
+.dingdan{
+	margin-right: 4px;
+}
+.mobile{
+	font-size: 16px;
+	margin-right: 4px;
+}
+
+/*导航*/
+#nav {
+	border-bottom: 1px solid #f69;
+}
+#def-nav li{
+	float: left;
+	margin-right: 10px;
+	line-height: 48px;
+	font-weight: 600;
+}
+#nav li a{
+	display: block;
+	padding: 0 16px;
+}
+#nav li a.active{
+	border-bottom: 3px solid #f69;
+	color: #f69;
+}
+#nav li a:hover{
+	border-bottom: 3px solid #f69;
+	color: #f69;
+}
+.more{
+	padding-right: 10px;
+	background: url("../img/bg/mls_global.png") no-repeat 45px -45px;
+}
+.more:hover{
+	background: url("../img/bg/mls_global.png") no-repeat -195px -68px;
+}
+.hifan{
+	width:2px;
+	height:48px;
+	background: url(../img/border/hiborder.png) no-repeat center center;
+}
+#nav li.hifan:hover{
+	border: 0;
+}
+
+/*底部*/
+#foot{
+	width: 100%;
+	min-width: 1260px;
+	margin-top: 15px;
+	padding-top: 30px;
+	background-color: #f5f5f5;
+	border-top: 1px solid #ddd;
+}
+#com-foot .flist{
+	float: left;
+	margin-right: 50px;
+	margin-bottom: 20px;
+	line-height: 26px;
+}
+.teleicon{
+	width: 36px;
+	float: left;
+	height: 40px;
+	margin-right: 15px;
+	background: url(../img/bg/teleIcon.png) no-repeat center;
+}
+.connact{
+	width: 138px;
+	float: left;
+}
+.telenum{
+	font-size: 20px;
+}
+#com-foot .flist h4{
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 600;
+}
+a {
+    color: #666;
+    text-decoration: none;
+}
+#com-foot .flist p div{
+	width: 16px;
+	height: 16px;
+}
+.flist .i-sina{
+	height: 16px;
+	width: 16px;
+	margin-top: 5px;
+	margin-right: 5px;
+	float: left;
+	background: url("../img/bg/mls_global.png") no-repeat left -21px;
+}
+.flist .i-qzone{
+	height: 16px;
+	width: 16px;
+	margin-top: 5px;
+	margin-right: 5px;
+	float: left;
+	background: url("../img/bg/mls_global.png") no-repeat -73px -21px;
+}
+.flist .i-tencent{
+	height: 16px;
+	width: 16px;
+	margin-top: 5px;
+	margin-right: 5px;
+	float: left;
+	background: url("../img/bg/mls_global.png") no-repeat -49px -21px;
+}
+//导航 更多
+#def-nav .inner li.drop{
+	position: relative;
+}
+#def-nav .down {
+    position: absolute;
+    top: 47px;
+    left: -32px;
+    z-index: 999;
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-top: none;
+    width: 110px;
+    display: none;
+}
+#def-nav .down li a:hover {
+    background: #F4F5F6;
+}
+#def-nav .down li a {
+    height: 20px;
+    line-height: 20px;
+    width: 100%;
+    padding: 5px 0;
+    text-align: center;
+    border: none;
+    font-weight: normal;
+    margin: 0;
+}
+#def-nav .down li{
+	width: 100%;
+    line-height: 2.5;
+    margin: 0;
+}

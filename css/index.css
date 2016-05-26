@@ -1,0 +1,75 @@
+/*banner*/
+.top_bnr {
+    background-color: #f7f7f7;
+    height: 420px;
+    overflow: hidden;
+    width: 960;
+    margin-left: 240px;
+}
+.banner{
+    height: 419px;
+    overflow: hidden;
+    width: 100%;
+    z-index: 0;
+}
+.top_bnr .banner li {
+    float: left;
+    width: 100%;
+}
+
+/*二级菜单*/
+.top_wrap .menu_box {
+    width: 240px;
+    z-index: 10;
+    height: 574px;
+    position: absolute;
+    left: 0;
+    top: -420px;
+}
+.top_wrap .menu_box .sec_menu {
+    background-color: #fff;
+    border: 1px solid #e6e6e6;
+    float: left;
+    height: 572px;
+    width: 238px;
+}
+.top_wrap .top_box {
+    position: relative;
+    width: 100%;
+}
+.top_wrap .menu_box .sec_menu .list {
+    position: relative;
+    border-bottom: 1px dotted #ccc;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.top_wrap .menu_box .sec_menu .list_cont {
+    position: relative;
+    z-index: 8;
+    padding: 12px 0 6px;
+}
+.top_wrap .menu_box .sec_menu .list .nav_tit {
+    height: 18px;
+    font-size: 14px;
+    font-weight: 600;
+}
+.top_wrap .menu_box .sec_menu .list .nav_tit a {
+    color: #f69;
+    float: left;
+    margin-right: 10px;
+}
+.top_wrap .menu_box .sec_menu .list p.listP {
+    height: 72px;
+    line-height: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 190px;
+    padding-top: 5px;
+}
+.top_wrap .menu_box .sec_menu .list p.listP a {
+    float: left;
+    margin-right: 14px;
+}
+.pink_a{
+	color: #f69;
+}
