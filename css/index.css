@@ -1,29 +1,74 @@
-/*banner*/
+/*---------------------------------banner图片-----------------------------*/
 .top_bnr {
     background-color: #f7f7f7;
+    width: 960px;
     height: 420px;
     overflow: hidden;
-    width: 960px;
     margin-left: 240px;
+    position: relative;
 }
 .banner{
     height: 419px;
-    overflow: hidden;
-    width: 100%;
+    /*overflow: hidden;*/
+    /*width: 100%;*/
+    width: 3000px;
     z-index: 0;
 }
-.top_bnr .banner li {
+.banner li{
     float: left;
-    width: 100%;
 }
-
-/*二级菜单*/
+/*---------------------------------轮播小按钮------------------------------------*/
+.top_bnr .bnr_btn{
+    position: absolute;
+    top: 380px;
+    left: 440px;
+}
+.top_bnr .bnr_btn a{
+    display: inline-block;
+    background: #000;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    margin-right: 22px;
+    cursor: pointer;
+}
+.top_bnr .bnr_btn a.on{
+    background: none;
+    border: 3px solid #000;
+    height: 12px;
+    width: 12px;
+    margin-bottom: -4px;
+}
+/*-------------轮播左右按钮-----------*/
+.bnr_btn_lr{
+    display: none;
+}
+.bnr_btn_lr .bnr_btn_l{
+    position: absolute;
+    left: 0;
+    top: 200px;
+    width: 34px;
+    height: 44px;
+    background: url("../img/bg/bnr_btn_left1.png") no-repeat center;
+    cursor: pointer;
+}
+.bnr_btn_lr .bnr_btn_r{
+    position: absolute;
+    right: 0;
+    top: 200px;
+    width: 34px;
+    height: 44px;
+    background: url("../img/bg/bnr_btn_right1.png") no-repeat center;
+    cursor: pointer;
+}
+/*---------------------二级菜单------------------*/
 .corner1{
     font-size: 16px;
     color: #999;
     position: absolute;
     top: 48px;
-    right: -5px ;
+   /* right: 20px;*/
+    right: 0px;
     color: #666;
 }
 .corner2{
@@ -31,7 +76,8 @@
     color: #999;
     position: absolute;
     top: 48px;
-    right: -5px ;
+    /*right: 20px ;*/
+    right: 0;
     color: #f69;
 }
 .top_wrap .menu_box {
@@ -59,6 +105,11 @@
     border-bottom: 1px dotted #ccc;
     margin-left: 20px;
     margin-right: 20px;
+
+    /*z-index: 0;
+    border-right: 1px solid #e6e6e6;
+    border-left: 1px solid #e6e6e6;
+    width: 238px;*/
 }
 .top_wrap .menu_box .sec_menu .list.active{
     margin-left: 0px;
@@ -67,11 +118,12 @@
     padding-right: 20px;
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
+    /*border-right: none;*/
 }
 .top_wrap .menu_box .sec_menu .list_cont {
     position: relative;
     z-index: 8;
-    padding: 12px 0 6px;
+    padding: 12px 20px 6px;
 }
 .top_wrap .menu_box .sec_menu .list .nav_tit {
     height: 18px;
@@ -107,7 +159,7 @@
     z-index: 4;
     position: absolute;
     top: -1px;
-    right: -353px;
+    right: -352px;
     display: none;
 }
 .top_wrap .thir_menu h4{
@@ -133,4 +185,70 @@
     width: 2px;
     background: #fff;
     float: right;
+}
+/*banner底下5个图*/
+.top_wrap .bnr_box {
+    height: 144px;
+    width: 960px;
+    position: absolute;
+    right: 0;
+    top: 9px;
+    z-index: 1;
+}
+.top_wrap .bnr_box .pic_attr {
+    float: left;
+    overflow: hidden;
+    height: 145px;
+}
+.top_wrap .bnr_box .pic_attr li {
+    margin-left: 13px;
+    overflow: hidden;
+    display: inline;
+    width: 227px;
+    width: 182px;
+    margin-left: 5px;
+}
+/*主体*/
+.auto_wrap {
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+    margin-top: 154px;
+}
+.module {
+    margin-top: 40px;
+}
+.module .tit h2{
+	font-weight: 700;
+    float: left;
+    font-size: 20px;
+    background-color: #fff;
+}
+.module .tit h2 .subtit {
+    font-weight: normal;
+    font-size: 12px;
+    color: #999;
+    padding: 0 5px;
+}
+.fashion .tit .operate {
+    background: 0;
+}
+.module .tit .operate {
+    padding: 9px 0;
+    padding-right: 10px;
+    color: #999;
+    text-align: right;
+    border-bottom: 1px solid #ededed;
+}
+.module .cont {
+    margin-top: 20px;
+    margin-left: -20px;
+}
+.fashion .cont a {
+    margin-left: 20px;
+    width: 183px;
+}
+.module .cont a {
+    float: left;
 }

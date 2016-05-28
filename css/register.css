@@ -136,6 +136,9 @@ body{
 	padding-bottom: 15px;
 	font-size: 14px;
 }
+.wrap .reg_wrap .main .reg_form .fast_login h3{
+	font-weight: normal;
+}
 .reg_form .more_way_wrap{
 	padding-bottom: 25px;
 	line-height: 26px;

@@ -2,38 +2,81 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>登录</title>
-	<link rel="stylesheet" href="../css/base.css">
-	<link rel="stylesheet" href="../css/common.css">
+	<title>登陆 － 美丽说</title>
+	<link rel="shortcut icon" href="../img/logo/titlogo.png" type="image/x-icon" />
+	<link rel="stylesheet" href="../css/reset.css">
 	<link rel="stylesheet" href="../css/login.css">
 </head>
 <body>
-	<div id="header"></div>
-	<div id="main">这里是登录的内容</div>
-	<div id="footer"></div>
 
 	<script src="../lib/jquery-1.12.3.js"></script>
-	<script src="../js/common.js"></script>
-	<script>
-		loadHtml("common/hearder.html", "header");
-		loadHtml("common/footer.html", "footer");
-		// $.ajax({
-		// 	url: "common/hearder.html",
-		// 	dataType: "html",
-		// 	async: false,
-		// 	success: function(msg) {
-		// 		$("#header").html(msg);
-		// 	}
-		// })
-		// $.ajax({
-		// 	url: "common/footer.html",
-		// 	dataType: "html",
-		// 	async: false,
-		// 	success: function(msg) {
-		// 		$("#footer").html(msg);
-		// 	}
-		// })
-	</script>
-	<script src="../js/login.js"></script>
+	<div class="wrap">
+		<div class="login_wrap">
+			<div class="head">
+				<a href="###" class="reg_logo"></a>
+				<a href="###" class="welcome_txt"></a>
+			</div>
+			<div class="main clearfix">
+				<div class="ad_wrap"><img src="../img/register_login_bg/ad_img.jpg" alt="" /></div>
+				
+				<div class="login_form" id="login_form">
+					<form action="" method="post">
+						<h3><a href="###">注册</a>登陆美丽说</h3>
+						<div class="login_list">
+							<p class="login_box">
+								<input type="text" id="mlsUser" class="login_txt" placeholder="邮箱/手机号/昵称" name="mlsUser"/>
+								<span class="user_icon"></span>
+							</p>
+						</div>
+						<div class="login_list">
+							<p class="login_box">
+								<input type="text" id="password" class="login_txt" placeholder="密码" name="password"/>
+								<span class="pwd_icon"></span>
+							</p>
+						</div>
+						<!--验证码-->
+						<div class="login_list authpic">
+							<div class="login_box">
+								<p class="notice_title">请点击下方图片旋转至正确位置，进行验证！</p>
+								<div class="pic_auth">
+									<ul class="pic_list">
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+									</ul>
+									<a class="change_pic" href="javascript:;"> 换一组 </a>
+								</div>
+							</div>
+						</div>	
+						
+						<div class="login_btn_wrap">
+							<input type="submit" id="login_btn" value="立即登陆"/>
+						</div>
+						<div class="remember">
+							<input name="savestate" id="savestate" checked="checked" type="checkbox">
+							<label for="savestate">记住我</label>
+						</div>
+						<div class="forget_pwd">
+							<a href="/user/findPwd" target="_blank">忘记密码？</a>
+						</div>
+					</form>
+					<div class="fast_login">
+						<h3>无需注册，即可登录</h3>
+						<div class="fast_way">
+							<a href="###" class="qq_way"></a>
+							<a href="###" class="sina_way"></a>
+							<a href="###" class="weixin_way"></a>
+						</div>
+					</div>
+					<div class="more_way_wrap">
+						<h4>更多登录方式>></h4>
+					</div>
+				</div>
+			</div>
+		</div>		
+	</div>
+	<script src="../js/register.js"></script>
 </body>
 </html>
