@@ -186,7 +186,7 @@
     background: #fff;
     float: right;
 }
-/*banner底下5个图*/
+/*----banner底下5个图----*/
 .top_wrap .bnr_box {
     height: 144px;
     width: 960px;
@@ -201,14 +201,13 @@
     height: 145px;
 }
 .top_wrap .bnr_box .pic_attr li {
-    margin-left: 13px;
+    float: left;
     overflow: hidden;
-    display: inline;
-    width: 227px;
+    /*display: inline;*/
     width: 182px;
-    margin-left: 5px;
+    margin-left: 10px;
 }
-/*主体*/
+/*--------------------------主体内容--------------------------*/
 .auto_wrap {
     overflow: hidden;
     margin-left: auto;
@@ -218,6 +217,7 @@
 }
 .module {
     margin-top: 40px;
+    clear: both;
 }
 .module .tit h2{
 	font-weight: 700;
@@ -231,24 +231,94 @@
     color: #999;
     padding: 0 5px;
 }
-.fashion .tit .operate {
-    background: 0;
-}
 .module .tit .operate {
-    padding: 9px 0;
-    padding-right: 10px;
+    background: url("../img/bg/bg_tri.png") no-repeat 101% -177px;
+    padding: 18px 10px 0 0;
     color: #999;
     text-align: right;
     border-bottom: 1px solid #ededed;
 }
+.module .cont a {
+    float: left;
+}
+.module .tit .operate a{
+    float: right;
+}
+.fashion .tit .operate {
+    background: 0;
+}
 .module .cont {
     margin-top: 20px;
     margin-left: -20px;
+    overflow: hidden;
 }
 .fashion .cont a {
     margin-left: 20px;
     width: 183px;
 }
-.module .cont a {
+.module .cont a img{
+    width: 100%;
+    height: 100%;
+}
+
+/*新品精选*/
+.fashion_new .item{
+    margin-left: 20px;
+    padding-bottom: 38px;
+    width: 224px;
     float: left;
+}
+.fashion_new .item .pic,.item .desc .tit{
+    overflow: hidden;
+}
+.price_like{
+    overflow: hidden;
+}
+.fashion_new .item .desc{
+    line-height: 20px;
+    padding-top: 15px;
+}
+.item .desc .price{
+    color: #f69;
+    font-size: 18px;
+}
+.item .desc .like{
+    padding-left: 20px;
+    background: url("../img/bg/bg_tri.png") no-repeat 0 -23px;
+    color: #999;
+    float: right;
+}
+/*时尚美妆*/
+.beauty .item{
+    margin-left: 20px;
+    padding-bottom: 38px;
+    width: 386px;
+    float: left;
+}
+.beauty .item a{
+    height: 386px;
+}
+.beauty .item a img{
+    width: 100%;
+    height: 100%;
+}
+.beauty .item .desc .tit{
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+}
+.beauty .item .desc .subtit{
+    line-height: 24px;
+    height: 50px;
+    overflow: hidden;
+}
+.beauty .item .desc .tag{
+    background: url("../img/bg/bg_tri.png") no-repeat 0 1px;
+    padding-left: 40px;
+}
+.beauty .item .desc .tag a{
+    margin-right: 5px;
+    height: 22px;
+    line-height: 22px;
+    color: #f69;
 }

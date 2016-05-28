@@ -9,4 +9,12 @@ function loadHtml(url,target){
 		}
 	});
 }
-
+/*导航栏吸顶效果*/
+$(window).scroll(function(){
+	var scTop = $(window).scrollTop();
+	if (scTop>=$(".header_bg").height()) {
+		$("#nav").addClass("fixed");
+	}else{
+		$("#nav").removeClass("fixed");
+	}
+})

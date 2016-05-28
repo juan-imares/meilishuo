@@ -1,0 +1,14 @@
+{
+  "bnr0":{
+    "src":"../img/banner/banner1.jpg",
+    "url":"###"
+  },
+  "bnr1":{
+    "src":"../img/banner/banner4.jpg",
+    "url":"###"
+  },
+  "bnr2":{
+    "src":"../img/banner/banner3.jpg",
+    "url":"###"
+  }
+}

@@ -1,4 +1,4 @@
-/*--------------------------------Í·²¿ ÏÂÔØ¿Í»§¶Ë ÏÂÀ­------------------------*/
+/*--------------------------------Í·ï¿½ï¿½ ï¿½ï¿½ï¿½Ø¿Í»ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½------------------------*/
 $("#com-topbar .drop").mouseover(function(){
     $("#com-topbar .down").css({
         "display":"block",
@@ -11,7 +11,7 @@ $("#com-topbar  .drop").mouseout(function(){
         "display":"none"
     });
 });
-/*------------------------------------µ¼º½ ¸ü¶à ÏÂÀ­-------------------------------*/
+/*------------------------------------ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½-------------------------------*/
 $("#def-nav .drop").mouseover(function(){
     $("#def-nav .down").css({
         "display":"block",
@@ -24,25 +24,24 @@ $("#def-nav .drop").mouseout(function(){
         "display":"none"
     });
 });
-/*----------------------------------µ×²¿ li ¶¨Ê±¹ö¶¯------------------------------*/
+/*----------------------------------ï¿½×²ï¿½ li ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½------------------------------*/
 var _this = $(".link-slide").first();
-var lineH=_this.find("li:first").height(); //»ñÈ¡ÐÐ¸ß
-var upHeight=0-1*lineH; //¹ö¶¯¸ß¶È
+var lineH=_this.find("li:first").height(); //ï¿½ï¿½È¡ï¿½Ð¸ï¿½
+var upHeight=0-1*lineH; //ï¿½ï¿½ï¿½ï¿½ï¿½ß¶ï¿½
 function scrollGun(){
     _this.animate({
         marginTop:upHeight
     },500,function(){
-        _this.find("li:first").appendTo(_this);  //Ä¿±êµãÆ¥ÅäÒ»¸öÔªËØÊÇÒÆ¶¯ Ä¿±êµãÆ¥Åä¶à¸öÔªËØÔ­ÔªËØ±£Áô ¸´ÖÆµ½¸÷Æ¥ÅäÄ¿±ê
+        _this.find("li:first").appendTo(_this);  //Ä¿ï¿½ï¿½ï¿½Æ¥ï¿½ï¿½Ò»ï¿½ï¿½Ôªï¿½ï¿½ï¿½ï¿½ï¿½Æ¶ï¿½ Ä¿ï¿½ï¿½ï¿½Æ¥ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½Ô­Ôªï¿½Ø±ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æµï¿½ï¿½ï¿½Æ¥ï¿½ï¿½Ä¿ï¿½ï¿½
         _this.css({marginTop:0});
     });
 }
-/*------------------------------------¶¨Ê±Æ÷--------------------------------------*/
-var timer = setInterval(function(){
-    scrollGun();    //µ×²¿¹ö¶¯
-    bannerMove();   //ÂÖ²¥Í¼
+/*------------------------------------ï¿½ï¿½Ê±ï¿½ï¿½--------------------------------------*/
+setInterval(function(){
+    scrollGun();    //ï¿½×²ï¿½ï¿½ï¿½ï¿½ï¿½
 },3000);
 
-/*-------------------------------¶þ¼¶²Ëµ¥ ÑùÊ½´ý¸Ä--------------------------------*/
+/*-------------------------------ï¿½ï¿½ï¿½ï¿½ï¿½Ëµï¿½ ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½--------------------------------*/
 $(".sec_menu").find("li").on("mouseover",function(){
     var pre = $($(".sec_menu .list")[0]).prev();
     pre.css({"border":"none"});
@@ -56,7 +55,21 @@ $(".sec_menu").find("li").on("mouseout",function(){
     $(".sec_menu .list").removeClass("active"), $(this).removeClass("active"), $(this).children(".thir_menu").hide();
 });
 
-/*-------------------------------ÂÖ²¥Í¼---------------------------------*/
+/*-------------------------------ï¿½Ö²ï¿½Í¼---------------------------------*/
+/*ï¿½ï¿½ï¿½ï¿½ï¿½Ö²ï¿½Í¼Æ¬*/
+$.ajax({
+    type:"get",
+    url:"../data/banner.json",
+    "success": function(msg){
+        var j = 0;
+        for(var i in msg){
+            if(j==4){j=0;}
+            $(".banner .pic").eq(j).append("<a href="+msg[i].url+">"+"<img src="+msg[i].src+"/>"+"</a>");
+            j++;
+        }
+    }
+})
+var timer = setInterval("bannerMove()",3000);
 var n=0;
 var count = $(".banner li").length; //count = 3
 $(".bnr_btn a").click(function(e){
@@ -72,6 +85,7 @@ function bannerMove(){
     $(".banner li").filter(":visible").fadeOut(300).parent().children().eq(n).fadeIn(500);
     $(".bnr_btn a").eq(n).addClass("on").siblings().removeClass("on");
 }
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ³ï¿½
 $(".banner_wrap").hover(function(){
     clearInterval(timer);
     $(".bnr_btn_lr").css("display","block");
@@ -79,32 +93,70 @@ $(".banner_wrap").hover(function(){
     timer = setInterval("bannerMove()",3000);
     $(".bnr_btn_lr").css("display","none");
 });
-
+//ï¿½ï¿½ï¿½ï¿½Å¥
 $(".bnr_btn_l").click(function() {
     $(".banner li").eq(n).fadeOut(300);
     $(".banner li").eq(n-1).fadeIn(500);
     $(".bnr_btn a").eq(n-1).addClass("on").siblings().removeClass("on");
     n = n-1;
 });
+//ï¿½ï¿½ï¿½ï¿½Å¥
 $(".bnr_btn_r").click(function(){
     $(".banner li").eq(n).fadeOut(300);
     $(".banner li").eq(n+1).fadeIn(500);
     $(".bnr_btn a").eq(n+1).addClass("on").siblings().removeClass("on");
     n = n+1;
 });
-/*Ö÷Ìå fashion*/
+/*ï¿½ï¿½ï¿½ï¿½ fashion*/
 $.ajax({
     type:"get",
     url:"../data/fashion.json",
     "success": function(msg){
     	for(var i in msg){
-    		console.log(msg[i]);
-    		$(".fashion .cont a").append("<img src="+msg[i].src+"/>");
+    		$(".fashion .cont").append("<a href="+msg[i].url+">"+"<img src="+msg[i].src+"/>"+"</a>");
         }
-        
     }
 })
-
+/*fashion_new*/
+$.ajax({
+    type:"get",
+    url:"../data/fashion_new.json",
+    contentType : "application/json",
+    dataType:"json",
+    "success": function(msg){
+        var j = 0;
+        for(var i in msg){
+            if(j==10){j=0;}
+            $(".fashion_new .cont .item .pic").eq(j).append("<a href="+msg[i].url+">"+"<img src="+msg[i].src+"/>"+"</a>");
+            $(".fashion_new .cont .item .desc .price_like").eq(j).append("<span class='price'>"+msg[i].price+"</span>");
+            $(".fashion_new .cont .item .desc .price_like").eq(j).append("<span class='like'>"+msg[i].likeNum+"</span>");
+            $(".fashion_new .cont .item .desc .tit").eq(j).append("<a href="+msg[i].url+">"+msg[i].desc+"</a>");
+            j++;
+        }
+    }
+})
+/*beauty*/
+$.ajax({
+    type:"get",
+    url:"../data/beauty.json",
+    contentType : "application/json",
+    dataType:"json",
+    "success": function(msg){
+        var j = 0;
+        for(var i in msg){
+            if(j==3){j=0;}
+            $(".beauty .cont .item .pic").eq(j).append("<a href="+msg[i].url+">"+"<img src="+msg[i].src+"/>"+"</a>");
+            $(".beauty .cont .item .desc .two_price").eq(j).append("<span class='price'>"+msg[i].price+"</span>");
+            $(".beauty .cont .item .desc .two_price").eq(j).append("<span class='like'>"+msg[i].oriprice+"</span>");
+            $(".beauty .cont .item .desc .tit").eq(j).append("<a href="+msg[i].url+">"+msg[i].name+"</a>");
+            $(".beauty .cont .item .desc .subtit").eq(j).append(msg[i].desc);
+            $(".beauty .cont .item .tag").eq(j).append("<a href="+msg[i].url+">"+msg[i].word1+"</a>");
+            $(".beauty .cont .item .tag").eq(j).append("<a href="+msg[i].url+">"+msg[i].word2+"</a>");
+            $(".beauty .cont .item .tag").eq(j).append("<a href="+msg[i].url+">"+msg[i].word3+"</a>");
+            j++;
+        }
+    }
+})
 
 
 
