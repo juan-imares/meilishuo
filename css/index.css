@@ -262,27 +262,27 @@
 }
 
 /*新品精选*/
-.fashion_new .item{
+.fashion_new .item,.guess_like .item{
     margin-left: 20px;
-    padding-bottom: 38px;
+    padding-bottom: 30px;
     width: 224px;
     float: left;
 }
-.fashion_new .item .pic,.item .desc .tit{
+.fashion_new .item .pic,.guess_like .item .pic,.item .desc .tit{
     overflow: hidden;
 }
 .price_like{
     overflow: hidden;
 }
-.fashion_new .item .desc{
+.fashion_new .item .desc,.beauty .item .desc, .guess_like .item .desc{
     line-height: 20px;
     padding-top: 15px;
 }
-.item .desc .price{
+.fashion_new .item .desc .price,.guess_like .item .desc .price{
     color: #f69;
     font-size: 18px;
 }
-.item .desc .like{
+.fashion_new .item .desc .like,.guess_like .item .desc .like{
     padding-left: 20px;
     background: url("../img/bg/bg_tri.png") no-repeat 0 -23px;
     color: #999;
@@ -291,7 +291,7 @@
 /*时尚美妆*/
 .beauty .item{
     margin-left: 20px;
-    padding-bottom: 38px;
+    padding-bottom: 30px;
     width: 386px;
     float: left;
 }
@@ -321,4 +321,150 @@
     height: 22px;
     line-height: 22px;
     color: #f69;
+}
+.item .desc .ori_price{
+	padding-left: 25px;
+	text-decoration: line-through;
+	color: #999;
+}
+/*Hi范儿*/
+.hifan .tab{
+	width: 320px;
+	text-align: center;
+	margin: 0 auto;
+}
+.recommend_shop .cont .tab div, .hifan .cont .tab li {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    font-size: 16px;
+    margin: 20px;
+    margin-top: 0;
+    cursor: pointer;
+    float: left;
+}
+.recommend_shop .cont .tab .active, .hifan .cont .tab .active {
+    color: #f69;
+    border-bottom: 2px solid #f69;
+}
+.recommend_shop .cont .tab-inner .item, .hifan .cont .tab-inner .item {
+    position: relative;
+    margin-left: 20px;
+    width: 386px;
+    float: left;
+}
+.recommend_shop .cont .tab-inner .tab-item, .hifan .cont .tab-inner .tab-item {
+	display: none;
+}
+.recommend_shop .cont .tab-inner .active, .hifan .cont .tab-inner .active {
+    display: block;
+}
+.hifan .cont .tab-inner .item img {
+    width: 386px;
+    height: 230px;
+}
+/*推荐店铺*/
+.recommend_shop .cont .tab-inner .item img {
+    width: 386px;
+    height: 333px;
+}
+.recommend_shop .cont .tab-inner .item .mask {
+    display: none;
+}
+.recommend_shop .cont .tab-inner .item .mask .bg {
+    font-size: 14px;
+    position: absolute;
+    top: 0;
+    background-color: #333;
+    opacity: .5;
+    filter: alpha(opacity=50);
+    width: 386px;
+    height: 333px;
+}
+.recommend_shop .cont .tab-inner .item .mask .add, .recommend_shop .cont .tab-inner .item .mask .go, .recommend_shop .cont .tab-inner .item .mask .unadd {
+    position: absolute;
+    width: 120px;
+    height: 42px;
+    line-height: 42px;
+    border: 1px solid #fff;
+    color: #fff;
+    left: 132px;
+    top: 110px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+.recommend_shop .cont .tab-inner .item .mask .go {
+    top: 180px;
+}
+.recommend_shop .cont .tab-inner .item .mask .go a{
+	display: block;
+	width: inherit;
+    color: #fff;
+}
+.recommend_shop .cont .tab-inner .item .mask .unadd:hover,.recommend_shop .cont .tab-inner .item .mask .go a:hover {
+    background: #fff;
+    color: #666;
+}
+.recommend_shop .cont .tab-inner .item .desc {
+    padding-top: 15px;
+    text-align: center;
+    line-height: 25px;
+}
+.recommend_shop .cont .tab-inner .item .desc .tit {
+    font-size: 22px;
+    color: #333;
+    height: 25px;
+    overflow: hidden;
+}
+.recommend_shop .cont .tab-inner .item .desc a {
+    float: none;
+}
+.recommend_shop .cont .tab-inner .item .desc .subtit {
+    color: #999;
+    height: 25px;
+    overflow: hidden;
+}
+.recommend_shop .cont .tab-inner .item .desc i {
+    font-style: normal;
+    color: #f69;
+    padding-right: 20px;
+}
+.recommend_shop .cont .tab-inner .item .desc .last {
+    padding-right: 0;
+}
+.recommend_shop .cont .tab{
+	width: 520px;
+	margin: 0 auto;
+}
+/*猜你喜欢*/
+.guess_like {
+    margin-top: 20px;
+}
+.guess_like .tit {
+    overflow: hidden;
+}
+.guess_like .tit .operate {
+    background-position: 1178px -202px;
+    padding-right: 0;
+    background: url("../img/bg/bg_tri.png") no-repeat 100% -200px;
+}
+.guess_like .tit a {
+    width: 100%;
+    cursor: pointer;
+    padding-right: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.guess_like .item .pic a{
+	height: 340px;
+}
+.guess_like .tit a {
+    width: 100%;
+    cursor: pointer;
+    padding-right: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }

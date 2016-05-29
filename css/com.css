@@ -172,7 +172,7 @@ h1{
 .more:hover{
 	background: url("../img/bg/mls_global.png") no-repeat -195px -68px;
 }
-.hifan{
+#nav li.hifan{
 	width:2px;
 	height:48px;
 	background: url("../img/border/hiborder.png") no-repeat center center;
@@ -315,4 +315,324 @@ h1{
 	width: 100%;
     line-height: 2.5;
     margin: 0;
+}
+
+/*----------侧边栏------*/
+#global-sidebar {
+    width: 38px;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    z-index: 30000;
+    top: 0;
+}
+.relative-div {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 256;
+}
+.relative-div .cart-im-panel {
+    z-index: 256;
+    height: 45%;
+    position: relative;
+    min-height: 260px;
+    float: right;
+    margin-right: 38px;
+}
+/*.relative-div .show-other {
+    left: 0;
+}*/
+/*.relative-div .slide-out {
+    animation: slideOut 0.5s forwards;
+    -moz-animation: slideOut 0.5s forwards;
+    -webkit-animation: slideOut 0.5s forwards;
+    -o-animation: slideOut 0.5s forwards;
+}*/
+.relative-div .side-other {
+    height: 100%;
+    position: absolute;
+    left: 38px;   /*38px*/
+}
+.relative-div .cart-im-panel .cart-im-box {
+    position: absolute;
+    bottom: 0;
+}
+.relative-div .cart-im-panel #side-cart {
+    border-top: 1px solid #ddd;
+    height: 108px;
+    width: 36px;
+}
+.relative-div .vertical-font {
+    width: 12px;
+    margin-left: 13px;
+    margin-top: 5px;
+}
+.relative-div .cart-im-panel #side-cart .red-cart {
+    background: url("../img/bg/red_cart.png") no-repeat;
+    width: 17px;
+    height: 13px;
+    margin-top: 27px;
+    margin-left: 10px;
+    position: relative;
+}
+/*购物车*/
+.relative-div .cart-im-panel #side-cart:hover .white-cart {
+    display: block;
+}
+.relative-div .cart-im-panel #side-cart:hover .red-cart{
+	display: none;
+}
+.relative-div .cart-im-panel #side-cart .white-cart {
+    background: url("../img/bg/white_cart.png") no-repeat;
+    width: 17px;
+    height: 13px;
+    display: none;
+    margin-top: 27px;
+    margin-left: 10px;
+    position: relative;
+}
+/*加入购物车成功*/
+.relative-div .cart-im-panel .add-cart-success {
+    position: absolute;
+    background-color: #fff;
+    padding: 20px;
+    right: 38px;
+    border: 1px solid #ddd;
+    border-right: 0;
+    width: 538px;
+    top: 0px;
+    display: none;
+}
+.relative-div .cart-im-panel .white-triangle {
+    background: url("../img/bg/white_triangle.png") no-repeat;
+    width: 6px;
+    height: 12px;
+    position: absolute;
+    bottom: 140px;
+    display: none;
+}
+.relative-div em {
+    display: block;
+}
+em {
+    font-style: normal;
+}
+/*客服消息*/
+.relative-div .cart-im-panel #side-im:hover .white-im {
+    display: block;
+}
+.relative-div .cart-im-panel #side-im:hover .red-im{
+	display: none;
+}
+.relative-div .cart-im-panel #side-im .white-im {
+    background: url("../img/bg/white_im.png") no-repeat;
+    width: 15px;
+    height: 14px;
+    display: none;
+    margin-left: 11px;
+    position: relative;
+}
+/*客服信息*/
+.relative-div .vertical-font {
+    width: 12px;
+    margin-left: 13px;
+    margin-top: 5px;
+}
+.relative-div .cart-im-panel #side-im {
+    padding-top: 26px;
+    padding-bottom: 20px;
+}
+.relative-div .cart-im-panel #side-im .red-im {
+    background: url("../img/bg/red_im.png") no-repeat;
+    width: 15px;
+    height: 14px;
+    margin-left: 11px;
+    position: relative;
+}
+/*优惠券*/
+.relative-div .side-other #side-coupon:hover .white-coupon {
+    display: block;
+}
+.relative-div .side-other #side-coupon:hover .red-coupon{
+	display: none;
+}
+.relative-div .side-other #side-coupon .white-coupon {
+    background: url("http://i.meilishuo.net/css/images/order/white_coupon.png") no-repeat;
+    width: 18px;
+    height: 13px;
+    display: none;
+}
+.relative-div .side-other #side-coupon {
+    padding: 10px 9px;
+}
+.relative-div .side-other #side-coupon .red-coupon {
+    background: url("../img/bg/red_coupon.png") no-repeat;
+    width: 18px;
+    height: 13px;
+}
+.relative-div .side-button {
+    font-size: 12px;
+    color: #666;
+    background-color: #f6f6f6;
+    border: 1px solid #ddd;
+    border-top: none;
+    position: relative;
+    display: block;
+}
+/*滑入显示tip*/
+.relative-div .side-button .tip {
+    font-size: 12px;
+    color: #fff;
+    background-color: #666;
+    position: absolute;
+    right: 36px;
+    bottom: 4px;
+    white-space: nowrap;
+    padding: 7px 12px;
+    display: none;
+    z-index: 257;
+}
+/*喜欢的商品*/
+.relative-div .side-other #side-like {
+    padding: 11px 9px 10px;
+}
+.relative-div .side-other #side-like:hover .white-like {
+    display: block;
+}
+.relative-div .side-other #side-like:hover .red-like{
+	display: none;
+}
+.relative-div .side-other #side-like .white-like {
+    background: url("../img/bg/white_like.png") no-repeat;
+    width: 18px;
+    height: 16px;
+    display: none;
+}
+.relative-div .side-other #side-like .red-like {
+    background: url("../img/bg/red_like.png") no-repeat;
+    width: 18px;
+    height: 16px;
+}
+.relative-div .side-button:hover {
+    color: #fff;
+    background-color: #f69;
+}
+/*调查问卷*/
+.relative-div .side-other #side-feedback:hover .white-feedback {
+    display: block;
+}
+.relative-div .side-other #side-feedback:hover .red-feedback{
+	display: none;
+}
+.relative-div .side-other #side-feedback .white-feedback {
+    background: url("../img/bg/white_feedback.png") no-repeat;
+    width: 18px;
+    height: 16px;
+    display: none;
+}
+.relative-div .side-other #side-feedback {
+    padding: 10px 8px 11px 10px;
+}
+.relative-div .side-other #side-feedback .red-feedback {
+    background: url("../img/bg/red_feedback.png") no-repeat;
+    width: 18px;
+    height: 16px;
+}
+
+
+/*返回顶部*/
+.relative-div .side-go2top-panel {
+    z-index: 256;
+    position: absolute;
+    bottom: 0;
+    height: 20%;
+    width: 100%;
+}
+.relative-div .side-go2top-panel #go2top {
+    border-top: 1px solid #ddd;
+    height: 36px;
+    font-size: 12px;
+    color: #f69;
+    background-color: #f6f6f6;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    display: none;
+}
+.relative-div .side-go2top-panel #go2top .red-up-arrow {
+    background: url("../img/bg/red_up_arrow.png") no-repeat;
+    width: 14px;
+    height: 7px;
+    margin-top: 13px;
+    margin-left: 11px;
+}
+.relative-div .side-go2top-panel #go2top:hover div {
+    display: block;
+}
+.relative-div .side-go2top-panel #go2top div {
+    display: none;
+    margin: 4px 6px;
+}
+.relative-div .side-go2top-panel #go2top:hover em {
+    display: none;
+}
+/*上下空白*/
+.relative-div .side-other .empty-block-before {
+	width: 36px;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    background-color: #f6f6f6;
+    height: 45%;
+    min-height: 260px;
+}
+.relative-div .side-other .empty-block-after {
+	width: 36px;
+    height: 100%;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    background-color: #f6f6f6;
+}
+/*楼梯*/
+#loutiwrap{
+	background: url(../img/register_login_bg/login_bg_m1.jpg) no-repeat;
+	border-radius: 10px;
+	display: none;
+}
+.louti{
+	width: 30px;
+    position: fixed;
+    top: 180px;
+    left: 25px;
+    border: 1px solid #f69;
+}
+.louti li {
+    border-bottom: 1px dotted #f69;
+    text-align: center;
+    line-height: 60px;
+    cursor: pointer;
+    position: relative;
+    font-size: 12px;
+}
+.louti li span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 30px;
+    height: 60px;
+    color: #f69;
+    background: #fff;
+}
+.louti li:hover span {
+    display: block;
+    color: #fff;
+    background: #f69;
+}
+.louti li span.active {
+    display: block;
+    color: #f69;
+    background: #fff;
+}
+li.lastLou{
+	border: none;
 }

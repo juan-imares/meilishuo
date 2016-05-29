@@ -1,0 +1,207 @@
+.content_fluid {
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+.notic {
+    width: 1200px;
+    margin: 0 auto;
+}
+.list {
+    height: 90px;
+    border: 1px solid #e1e1e1;
+    margin-top: 16px;
+    padding: 20px;
+    overflow: hidden;
+}
+.list .item .item_tit {
+    float: left;
+    width: 60px;
+    text-align: center;
+    margin-top: 3px;
+}
+.list .item .item_tit .item_name {
+    height: 17px;
+    overflow: hidden;
+    font-family: "Microsoft YaHei",Arial;
+    font-size: 14px;
+    font-weight: normal;
+}
+.list .item .links {
+    float: left;
+    width: 200px;
+    overflow: hidden;
+    margin-left: 14px;
+}
+.list .item .links .data_block {
+    float: left;
+}
+.list .item .links .data_block li {
+    width: 66px;
+    overflow: hidden;
+}
+
+.list .item .links {
+    float: left;
+    width: 200px;
+    overflow: hidden;
+    margin-left: 14px;
+}
+.list .item .links a {
+    margin-bottom: 3px;
+    padding-left: 2px;
+    padding-right: 2px;
+    height: 20px;
+    line-height: 20px;
+    white-space: nowrap;
+    display: inline-block;
+    font-size: 12px;
+    font-family: "Microsoft YaHei",Arial;
+}
+.list .item .links .data_block .highlight {
+    color: #f69;
+}
+.list .item .item_tit .item_pic {
+    margin-top: 10px;
+    width: 57px;
+}
+/*类目筛选*/
+.filter_wrap {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*面包屑*/
+.bread_crumbs {
+    margin-top: 14px;
+    color: #999;
+}
+.bread_crumbs .corner {
+    margin-left: 6px;
+    margin-right: 6px;
+}
+i {
+    font-family: simsun,'Advent Pro',sans-serif;
+}
+/*筛选器*/
+.group_box {
+    margin-top: 12px;
+    border: solid 1px #e1e1e1;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+}
+.inner_box .first {
+    border: 0;
+}
+.inner_box .row {
+    position: relative;
+    /*border-top: solid 1px #eee;*/
+}
+.inner_box .left_cate {
+    position: absolute;
+    left: 0;
+    top: 12px;
+}
+.inner_box .center_content {
+    margin-left: 72px;
+    margin-right: 197px;
+}
+.inner_box .center_content a:hover span{
+	color: #f69;
+}
+.inner_box .center_content .items_wraper {
+    height: 38px;
+    overflow: hidden;
+}
+.inner_box .center_content a {
+    float: left;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    margin-right: 36px;
+    height: 12px;
+}
+.inner_box .right_selector {
+    position: absolute;
+    right: 0;
+    top: 12px;
+}
+.arrow_down, .arrow_up {
+    display: inline-block;
+    width: 9px;
+    height: 5px;
+    margin-left: 4px;
+    background: url('http://d05.res.meilishuo.net/pic/_o/20/35/26f210ef7aecc0d1906030069be8_100_42.cg.png') no-repeat;
+    background-position: -18px -16px;
+}
+.arrow_up {
+    background: url('http://d05.res.meilishuo.net/pic/_o/20/35/26f210ef7aecc0d1906030069be8_100_42.cg.png') no-repeat;
+    background-position: -18px -23px;
+}
+/*排序*/
+.sort_box {
+    border: solid 1px #e1e1e1;
+    color: #333;
+    background-color: #f8f8f8;
+    margin-top: 8px;
+    *zoom: 1;
+}
+.byprice, .bytype {
+    float: left;
+}
+.sort_box ul li {
+    float: left;
+}
+.sort_box ul li a.first {
+    border-left: none;
+    margin-left: 0;
+}
+.sort_box ul li a.curr {
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
+    border-left: solid 1px #e1e1e1;
+    border-right: solid 1px #e1e1e1;
+}
+.sort_box ul li .theme, .sort_box ul li .trigger_link {
+    display: block;
+    text-align: center;
+    padding: 12px 20px;
+    margin-left: -1px;
+    border-left: solid 1px #f8f8f8;
+    border-right: solid 1px #f8f8f8;
+}
+.laypr {
+    position: relative;
+}
+.sort_box ul li .trigger_link {
+    color: #666;
+}
+.sort_box ul li .theme, .sort_box ul li .trigger_link {
+    display: block;
+    text-align: center;
+    padding: 12px 20px;
+    margin-left: -1px;
+    border-left: solid 1px #f8f8f8;
+    border-right: solid 1px #f8f8f8;
+}
+.laypr .pricesort {
+    position: absolute;
+    display: none;
+    height: 76px;
+    margin-top: -1px;
+    margin-left: -1px;
+    top: 0;
+    border: solid 1px #c5c5c5;
+    z-index: 1;
+    background-color: #fff;
+}
+.laypr .pricesort li {
+    float: none;
+    height: 38px;
+    line-height: 38px;
+    white-space: nowrap;
+}
+.laypr .pricesort a {
+    padding: 12px 20px;
+}

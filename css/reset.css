@@ -19,6 +19,7 @@ time, mark, audio, video {
     vertical-align: baseline;
     outline: none;
     color: #666;
+    font-family: "微软雅黑";
 }
 input,textarea{
 	outline: none;
