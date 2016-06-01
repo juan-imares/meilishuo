@@ -1,4 +1,4 @@
-/*---------------------------------banner图片-----------------------------*/
+/*-------------------banner图片--------------------*/
 .top_bnr {
     background-color: #f7f7f7;
     width: 960px;
@@ -17,7 +17,7 @@
 .banner li{
     float: left;
 }
-/*---------------------------------轮播小按钮------------------------------------*/
+/*------------------轮播小按钮-----------------------*/
 .top_bnr .bnr_btn{
     position: absolute;
     top: 380px;
@@ -25,7 +25,7 @@
 }
 .top_bnr .bnr_btn a{
     display: inline-block;
-    background: #000;
+    background: #fff;
     width: 10px;
     height: 10px;
     border-radius: 10px;
@@ -34,7 +34,7 @@
 }
 .top_bnr .bnr_btn a.on{
     background: none;
-    border: 3px solid #000;
+    border: 3px solid #fff;
     height: 12px;
     width: 12px;
     margin-bottom: -4px;
@@ -270,6 +270,9 @@
 }
 .fashion_new .item .pic,.guess_like .item .pic,.item .desc .tit{
     overflow: hidden;
+}
+.fashion_new .item .pic:hover,.guess_like .item .pic:hover{
+	box-shadow: 0px -2px 10px #f69;
 }
 .price_like{
     overflow: hidden;

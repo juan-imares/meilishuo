@@ -1,0 +1,274 @@
+.flow_header {
+    width: 980px;
+    margin: 20px auto 0 auto;
+    overflow: hidden;
+}
+.status{
+	float: right;
+	margin-top: 40px;
+}
+.status-top {
+    *zoom: 1;
+    width: 978px;
+    margin: 30px auto auto;
+}
+.status-top .tag-item {
+    float: left;
+    line-height: 44px;
+    font-weight: normal;
+    color: #f69;
+    font-size: 16px;
+}
+.status-top .right {
+    line-height: 44px;
+    height: 30px;
+    float: right;
+}
+.status-top .right .red {
+    color: #f69;
+    font-size: 14px;
+}
+.status-top .right .total_price{
+	color: #f69;
+}
+.status-top .right .go_charge {
+    width: 50px;
+    height: 24px;
+    color: #fff;
+    background-color: #f69;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 2px;
+    line-height: 25px;
+    margin-left: 10px;
+}
+/*内容*/
+.container .cart{
+	background: none;
+	margin: 0 auto 50px;
+	width: 978px;
+	font-size: 12px;
+}
+.cart table{
+	empty-cells: show;
+	table-layout: fixed;
+	width: 100%;
+	text-align: center;
+}
+.container .cart thead th {
+    background-color: #f9f9f9;
+    font-weight: normal;
+    border-bottom: 1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
+    padding: 14px 0 13px;
+}
+.container .cart thead th.first, .container .cart tr.goods td.first {
+    border-left: 1px solid #e5e5e5 !important;
+    padding-left: 20px;
+}
+.container .cart thead th.last, .container .cart tr.goods td.last {
+    border-right: 1px solid #e5e5e5 !important;
+    padding-right: 37px;
+}
+.container .cart .tl {
+	width: 50px;
+    text-align: left;
+}
+.cart .empty, .cart .no_logged, .cart .error {
+    width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 130px;
+    padding-bottom: 170px;
+}
+.emptyTip{
+	padding-bottom: 50px;
+	position: relative;
+	font-size: 20px;
+}
+.emptyTip tr{
+	position: absolute;
+	top: 20px;
+	left: 400px;
+}
+.emptyTip td{
+	height: 50px;
+	line-height: 50px;
+	color: #f69;
+}
+.emptyTip td a{
+	text-decoration: none;
+	color: #f69;
+}
+.cart table tfoot td.first, .float_pannel table tfoot td.first {
+    border-left: 1px solid #e5e5e5 !important;
+    padding-left: 20px;
+}
+.cart table tfoot td, .float_pannel table tfoot td {
+    text-align: left;
+    background-color: #fff;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5 !important;
+    border-right: 1px solid #e5e5e5;
+}
+.cart table tfoot td.first{
+	position: relative;
+	border-right: none;
+	margin-bottom: 20px;
+}
+.cart table tfoot td.first input{
+	position: absolute;
+	top: 18px;
+	left: 20px;
+}
+.cart table tfoot td.first span{
+	position: absolute;
+	top: 20px;
+	left: 45px;
+}
+.cart table tfoot td.last .remove-selected, .float_pannel table tfoot td.last .remove-selected {
+    margin-left: 55px;
+    float: left;
+}
+.cart table tfoot td.last span, .float_pannel table tfoot td.last span, .cart table tfoot td.last a, .float_pannel table tfoot td.last a {
+    line-height: 52px;
+    display: inline;
+}
+.cart table tfoot td.last .right, .float_pannel table tfoot td.last .right {
+    height: 52px;
+    float: right;
+}
+.cart table tfoot td.last .right .go-charge-text, .float_pannel table tfoot td.last .right .go-charge-text {
+    float: left;
+}
+.cart table tfoot td.last .right .red, .float_pannel table tfoot td.last .right .red {
+    font-size: 20px;
+    color: #f69;
+}
+.cart tfoot .total_price{
+	color: #f69;
+}
+.cart table tfoot td.last .right .charge-btn, .float_pannel table tfoot td.last .right .charge-btn {
+    display: inline-block;
+    width: 150px;
+    height: 52px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #f69;
+    text-align: center;
+    line-height: 52px;
+    margin-left: 25px;
+}
+.container .cart tr.goods.last td {
+    border-bottom: 1px solid #e5e5e5 !important;
+}
+.container .cart tr.goods.first td {
+    border-top: 1px solid #e5e5e5;
+}
+.container .cart tr.goods td {
+    background-color: #fcfcfc;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    vertical-align: top;
+}
+.container .cart .g-content {
+    text-align: left;
+}
+.container .cart .g-content .img-title-detail {
+    position: relative;
+    height: 90px;
+    width: 300px;
+}
+.container .cart .g-content .img-title-detail .panel-img {
+    margin-right: 20px;
+    width: 90px;
+    float: left;
+}
+.container .cart .g-content .img-title-detail .inlineblock {
+    display: inline-block;
+}
+.container .cart .g-content .img-title-detail .title-detail-panel {
+    position: relative;
+    vertical-align: top;
+    width: 186px;
+    height: 80px;
+    margin-left: -2px;
+    float: right;
+}
+.container .cart .g-content .img-title-detail .title-detail-panel a {
+    line-height: 15px;
+    color: #666;
+}
+.container .cart .g-content .img-title-detail .title-detail-panel a:hover {
+    line-height: 15px;
+    color: #f69;
+    text-decoration: none;
+}
+.container .cart .g-content .img-title-detail .title-detail-panel .order_detail_wrapper {
+    position: absolute;
+    left: -5px;
+    bottom: -8px;
+}
+.container .cart .g-content .img-title-detail .title-detail-panel .order_detail_wrapper{
+    color: #999;
+    position: relative;
+    height: auto;
+    cursor: default;
+    text-align: left;
+}
+.container .cart .g-content .img-title-detail .title-detail-panel .order_detail_wrapper {
+    padding: 4px;
+}
+.container .cart .g-content .img-title-detail .title-detail-panel .order_detail_wrapper .order_info_item {
+    padding-right: 30px;
+    display: block;
+    line-height: 20px;
+    text-align: left;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    max-width: 163px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.container .cart .price-discount-activity span {
+	line-height: 30px;
+    display: block;
+}
+.container .cart .amount-counter {
+    position: relative;
+    /*display: inline-block;*/
+}
+.container .cart .amount-counter .minus {
+    left: 44px;
+    border-right: none;
+}
+.container .cart .amount-counter .add {
+    border-left: none;
+    top: 0;
+}
+.container .cart .amount-counter .minus, .container .cart .amount-counter .add {
+    position: absolute;
+    cursor: pointer;
+    width: 17px;
+    height: 17px;
+    border: 1px solid #e5e5e5;
+    display: inline-block;
+}
+.container .cart .amount-counter .amount {
+    width: 36px;
+    height: 17px;
+    line-height: 19px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #e5e5e5;
+    outline: 0;
+}
+#float_ctrl tr{
+	width: 978px;
+}
+/*空车提示*/
+.emptyTip{
+	display: none;
+}

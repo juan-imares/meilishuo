@@ -9,15 +9,18 @@ function loadHtml(url,target){
 		}
 	});
 }
+
 /*导航栏吸顶效果*/
 $(window).scroll(function(){
 	var scTop = $(window).scrollTop();
 	if (scTop>=$(".header_bg").height()) {
 		$("#nav").addClass("fixed");          //导航栏
+		$("body").css({"marginTop":"50px"}); //吸顶时设置body的上边距
 		$("#go2top").css("display","block");  //返回顶部
 		$("#loutiwrap").css("display","block"); //楼梯
 	}else{
 		$("#nav").removeClass("fixed");
+		$("body").css({"marginTop":"0px"});
 		$("#go2top").css("display","none");
 		$("#loutiwrap").css("display","none");
 	}
@@ -27,16 +30,11 @@ $("#go2top").on("click",function(){
 	$("html,body").animate({scrollTop:0},800);
 });
 /*侧边栏 滑出*/
-document.onmousemove = function(e){
-	x = e.clientX;
-	if(x>1310){
-		console.log(1);
-		$(".relative-div .side-other").animate({"left":"0px"});
-	}/*else if(x<1310){
-		$(".relative-div .side-other").animate({"left":"38px"});
-	}*/
-	
-}
+$("#global-sidebar").hover(function () {
+	$(".relative-div .side-other").stop().animate({"left":"0px"});
+},function(){
+	$(".relative-div .side-other").stop().animate({"left":"34px"});
+})
 
 /*楼梯*/
 var isClick = false;
@@ -45,7 +43,7 @@ $(".louti li").on("click", function () {
     //siblings()除了自己以外的其他的兄弟节点
     $(this).find("span").addClass("active").parent().siblings().find("span").removeClass("active");
     var docTop = $(".module").eq($(this).index()).offset().top;
-    $("body,html").stop().animate({"scrollTop":docTop-200+ 'px'},1000, function () {
+    $("body,html").stop().animate({"scrollTop":docTop-70+ 'px'},1000, function () {
         isClick = false;
     });
 });

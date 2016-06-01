@@ -9,44 +9,37 @@
 </head>
 <body>
 
-	<script src="../lib/jquery-1.12.3.js"></script>
 	<div class="wrap">
 		<div class="login_wrap">
 			<div class="head">
-				<a href="###" class="reg_logo"></a>
+				<a href="index.html" class="reg_logo"></a>
 				<a href="###" class="welcome_txt"></a>
 			</div>
 			<div class="main clearfix">
 				<div class="ad_wrap"><img src="../img/register_login_bg/ad_img.jpg" alt="" /></div>
 				
 				<div class="login_form" id="login_form">
-					<form action="" method="post">
-						<h3><a href="###">注册</a>登陆美丽说</h3>
+					<form action="" method="post" id="loginForm">
+						<h3><a href="regist.html">注册</a>登陆美丽说</h3>
 						<div class="login_list">
-							<p class="login_box">
+							<p class="login_box clearfix">
 								<input type="text" id="mlsUser" class="login_txt" placeholder="邮箱/手机号/昵称" name="mlsUser"/>
 								<span class="user_icon"></span>
 							</p>
 						</div>
 						<div class="login_list">
-							<p class="login_box">
-								<input type="text" id="password" class="login_txt" placeholder="密码" name="password"/>
+							<p class="login_box clearfix">
+								<input type="password" id="password" class="login_txt" placeholder="密码" name="password"/>
 								<span class="pwd_icon"></span>
 							</p>
 						</div>
 						<!--验证码-->
 						<div class="login_list authpic">
 							<div class="login_box">
-								<p class="notice_title">请点击下方图片旋转至正确位置，进行验证！</p>
+								<p class="notice_title">请输入验证码进行验证</p>
 								<div class="pic_auth">
-									<ul class="pic_list">
-										<li></li>
-										<li></li>
-										<li></li>
-										<li></li>
-										<li></li>
-									</ul>
-									<a class="change_pic" href="javascript:;"> 换一组 </a>
+									<div id="codediv"></div><a class="change_code" href="javascript:;"> 换一组 </a><br /><br /><br /><br />
+									<div class="codeinput"><input type="text" id="codetxt" /><span id="tips"></span></div>
 								</div>
 							</div>
 						</div>	
@@ -56,7 +49,7 @@
 						</div>
 						<div class="remember">
 							<input name="savestate" id="savestate" checked="checked" type="checkbox">
-							<label for="savestate">记住我</label>
+							<a for="savestate">记住我</a>
 						</div>
 						<div class="forget_pwd">
 							<a href="/user/findPwd" target="_blank">忘记密码？</a>
@@ -77,6 +70,9 @@
 			</div>
 		</div>		
 	</div>
-	<script src="../js/register.js"></script>
+	<script src="../lib/jquery-1.12.3.js"></script>
+	<script src="../lib/jquery.validate-1.13.1.js"></script>
+	<script src="../lib/jquery.cookie.js"></script>
+	<script src="../js/login.js"></script>
 </body>
 </html>

@@ -10,17 +10,19 @@
 <body>
 
 	<script src="../lib/jquery-1.12.3.js"></script>
+	<script src="../lib/jquery.cookie.js"></script>
+	<script src="../lib/jquery.validate-1.13.1.js"></script>
 	<div class="wrap">
 		<div class="reg_wrap">
 			<div class="head">
-				<a href="###" class="reg_logo"></a>
+				<a href="index.html" class="reg_logo"></a>
 				<a href="###" class="welcome_txt"></a>
 			</div>
 			<div class="main clearfix">
 				<div class="ad_wrap"><img src="../img/register_login_bg/ad_img.jpg" alt="" /></div>
 				<div class="reg_form" id="mob_reg">
-					<form action="" method="post">
-						<h3><a href="###">登陆</a>注册美丽说</h3>
+					<form action="" method="post" id="regForm">
+						<h3><a href="login.html">登陆</a>注册美丽说</h3>
 						<div class="reg_list">
 							<p class="reg_box">
 								<input type="text" id="mobile" class="reg_txt" placeholder="手机号" name="mobile"/>
@@ -35,7 +37,13 @@
 						</div>
 						<div class="reg_list">
 							<p class="reg_box">
-								<input type="text" id="password" class="reg_txt" placeholder="密码" name="password"/>
+								<input type="password" id="password" class="reg_txt" placeholder="密码" name="password"/>
+								<span class="pwd_icon"></span>
+							</p>
+						</div>
+						<div class="reg_list" id="confirm-password-wrap">
+							<p class="reg_box">
+								<input type="password" id="confirm-password" class="reg_txt" placeholder="确认密码" name="confirm-password"/>
 								<span class="pwd_icon"></span>
 							</p>
 						</div>

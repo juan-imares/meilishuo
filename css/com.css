@@ -5,6 +5,9 @@ a {
 a:hover{
 	color: #f69;
 }
+#nav{
+	height: 50px;
+}
 #com-topbar{
 	width: 100%;
 	height: 31px;
@@ -13,6 +16,11 @@ a:hover{
 .inner{
 	width: 1200px;
 	margin: 0 auto;
+}
+
+#search .inner{
+	width: 1100px;
+	padding-left: 100px;
 }
 #com-topbar ul{
 	width: 860px;
@@ -64,6 +72,9 @@ h1{
 	width: 360px;
 	float: left;
 	margin-top: 40px;
+}
+#nav h1{
+	
 }
 .search{
 	width: 45%;
@@ -197,9 +208,12 @@ h1{
 	background-color: #f5f5f5;
 	border-top: 1px solid #ddd;
 }
+#foot .inner{
+	width: 1000px;
+}
 #com-foot .flist{
 	float: left;
-	margin-right: 50px;
+	margin-right: 40px;
 	margin-bottom: 20px;
 	line-height: 26px;
 }
@@ -319,7 +333,7 @@ h1{
 
 /*----------侧边栏------*/
 #global-sidebar {
-    width: 38px;
+    width: 32px;
     height: 100%;
     position: fixed;
     right: 0;
@@ -338,7 +352,7 @@ h1{
     position: relative;
     min-height: 260px;
     float: right;
-    margin-right: 38px;
+    margin-right: 32px;
 }
 /*.relative-div .show-other {
     left: 0;
@@ -352,7 +366,7 @@ h1{
 .relative-div .side-other {
     height: 100%;
     position: absolute;
-    left: 38px;   /*38px*/
+    left: 32px;   /*38px*/
 }
 .relative-div .cart-im-panel .cart-im-box {
     position: absolute;
@@ -382,6 +396,10 @@ h1{
 }
 .relative-div .cart-im-panel #side-cart:hover .red-cart{
 	display: none;
+}
+.relative-div .cart-im-panel #side-cart:hover .red-cart .cart-num{
+	background-color: #000;
+	color: #000;
 }
 .relative-div .cart-im-panel #side-cart .white-cart {
     background: url("../img/bg/white_cart.png") no-repeat;
@@ -458,7 +476,7 @@ em {
 	display: none;
 }
 .relative-div .side-other #side-coupon .white-coupon {
-    background: url("http://i.meilishuo.net/css/images/order/white_coupon.png") no-repeat;
+    background: url("../img/bg/white_coupon.png") no-repeat;
     width: 18px;
     height: 13px;
     display: none;
@@ -517,6 +535,7 @@ em {
 .relative-div .side-button:hover {
     color: #fff;
     background-color: #f69;
+    text-decoration: none;
 }
 /*调查问卷*/
 .relative-div .side-other #side-feedback:hover .white-feedback {
@@ -550,7 +569,7 @@ em {
     width: 100%;
 }
 .relative-div .side-go2top-panel #go2top {
-    border-top: 1px solid #ddd;
+    /*border-top: 1px solid #ddd;*/
     height: 36px;
     font-size: 12px;
     color: #f69;
@@ -594,15 +613,13 @@ em {
 }
 /*楼梯*/
 #loutiwrap{
-	background: url(../img/register_login_bg/login_bg_m1.jpg) no-repeat;
-	border-radius: 10px;
 	display: none;
 }
 .louti{
-	width: 30px;
+	width: 26px;
     position: fixed;
     top: 180px;
-    left: 25px;
+    left: 0px;
     border: 1px solid #f69;
 }
 .louti li {
@@ -618,7 +635,7 @@ em {
     top: 0;
     left: 0;
     display: none;
-    width: 30px;
+    width: 26px;
     height: 60px;
     color: #f69;
     background: #fff;
@@ -635,4 +652,53 @@ em {
 }
 li.lastLou{
 	border: none;
+}
+/*加入购物车成功*/
+#msg{
+	position:absolute; 
+	top:0px; 
+	right:38px; 
+	z-index:10000; 
+	width:1px; 
+	height:52px; 
+	line-height:52px; 
+	font-size:20px; 
+	text-align:center; 
+	color:#fff; 
+	background:#360; 
+	display:none;
+}
+.red-cart .cart-num{
+	position: absolute;
+	top: -15px;
+	left: -12px;
+	border-radius: 10px;
+	color: #fff;
+}
+/*用户头像*/
+#username img{
+	vertical-align: middle;
+	height: 19px;
+	width: 19px;
+	border-radius: 9px;
+	padding-right: 2px;
+}
+/*我的喜欢*/
+#com-topbar .msg-num {
+    color: #fff;
+    background-color: #ff6497;
+    padding: 0 6px;
+}
+#username{
+	display: none;
+}
+#messg{
+	display: none;
+}
+#mylike span{
+	color: #f69;
+}
+#mylike{
+	
+	display: none;
 }

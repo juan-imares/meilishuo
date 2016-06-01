@@ -1,5 +1,44 @@
+;$(function(){	
+	//首页加载就判断cookie里是否有usermsg项 如果有就隐藏登陆注册相关按钮 且显示用户信息 如果没有就直接加载首页
+	if($.cookie("usermsg")){
+		$("#username a").append($.cookie("usermsg"));
+		$("#login_qq").css({"display":"none"});
+		$("#login_weichat").css({"display":"none"});
+		$("#login").css({"display":"none"});
+		$("#register").css({"display":"none"});
+		$("#username").show();
+		$("#messg").show();
+		$("#mylike").show();
+		/*把用户名显示到username中*/
+	}else{
+		$("#username").css({"display":"none"});
+		$("#messg").css({"display":"none"});
+		$("#mylike").css({"display":"none"});
+		$("#login_qq").show();
+		$("#login_weichat").show();
+		$("#login").show();
+		$("#register").show();
+	}
+	/*取购物车里商品数量，写入购物车提示数量*/
+	if($.cookie("carts")){
+		var goods = JSON.parse($.cookie("carts"));
+		$(".cart-num").html(goods.cat.num);
+	}
+	
+});
+
+/*导航栏点击事件*/
+$("#com-nav .navList").children().not("#com-nav .navList .hifan").children().not(".down").on("click",function(){
+	$(this).addClass("active").siblings().removeClass("active");
+	
+})
+/*返回顶部*/
+;$("#go2top").on("click",function(){
+    $("html,body").animate({scrollTop:0},800);
+});
+
 /*--------------------------------下载app 下拉------------------------*/
-;$("#com-topbar .drop").mouseover(function(){
+$("#com-topbar .drop").mouseover(function(){
     $("#com-topbar .down").css({
         "display":"block",
         "top":"31px",
@@ -83,6 +122,7 @@ $(".bnr_btn a").click(function(e){
 function bannerMove(){
     n = n>=count-1 ? 0 : ++n;  //0 -> 1
     $(".banner li").filter(":visible").fadeOut(300).parent().children().eq(n).fadeIn(500);
+    //$(".banner li").filter(":visible").fadeTo(300,0).parent().children().eq(n).fadeTo(500,0.66);
     $(".bnr_btn a").eq(n).addClass("on").siblings().removeClass("on");
 }
 //轮播图 鼠标移入暂停 移出继续

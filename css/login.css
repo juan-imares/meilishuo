@@ -56,17 +56,10 @@ body{
 .login_form .login_list .login_box{
 	position: relative;
 }
-.login_form .login_list .login_box{
-	width: 280px;
-	height: 34px;
-	line-height: 34px;
-	border: 1px solid #ddd;
-	color: #999;
-	padding-left: 35px;
-}
 .login_form input{
 	border: none;
 }
+
 .login_form .user_icon{
 	background: url(../img/bg/login_icon-4.png) no-repeat;
 	display: inline-block;
@@ -98,6 +91,20 @@ body{
 	cursor: pointer;
 }
 
+.login_wrap .main .login_form .login_list .login_txt {
+	position: absolute;
+	left: 0;
+	top: 0;
+    width: 280px;
+    height: 34px;
+    line-height: 34px/9;
+    border: 1px solid #ddd;
+    color: #999;
+    padding-left: 35px;
+}
+.login_wrap .main .login_form .login_list .login_txt.focus{
+	border: 1px solid #f69;
+}
 .fast_login .fast_way a{
 	width: 100px;
 	float: left;
@@ -164,7 +171,32 @@ body{
 .login_wrap .main .login_form .login_list .login_box .pic_auth {
     margin-bottom: 10px;
 }
-.login_wrap .main .login_form .login_list .login_box .pic_auth .change_pic {
+.login_wrap .main .login_form .login_list .login_box .pic_auth .change_code {
     text-decoration: underline;
     color: #f69;
+    float: left;
+    padding-top: 28px;
+}
+#codetxt{
+	border: 1px solid #ddd;
+	padding-left: 10px;
+}
+#codediv{
+	 width: 100px;
+	 height: 30px;
+	 line-height: 30px;
+	 padding: 5px 10px;
+	 border:1px #ccc solid;
+	 background: url("../img/bg/21.png") no-repeat left center;
+	 font-weight: 700;
+	 font-size: 20px;
+	 text-align: center;
+	 float: left;
+}
+#tips{
+	font-size: 14px;
+}
+/*错误信息*/
+.error{
+	color: #f69;
 }
