@@ -1,4 +1,22 @@
 $(function(){
+	
+	/*用户名失去焦点时 验证是否存在这个用户*/
+	$("#mlsUser").on("blur",function(){
+		var loguserName = $("#mlsUser").val();
+		if($.cookie("usermsg")){
+			if($("#mlsUser").val()!=$.cookie("usermsg")){
+				alert("没有这个用户哦~ 去注册吧~");
+			}
+			
+		}else{
+			
+			if(confirm("还没有注册哦~去注册吧~")){
+				location.href = "regist.html";
+			}
+			
+		}
+	});
+	
 	/*表单验证*/
 	$("#loginForm").validate({
 		rules: {
@@ -31,9 +49,11 @@ $(function(){
 	$(".login_txt").focus(function(){
 		$(this).addClass("focus").siblings().removeClass("focus");
 	});
-	$(".login_txt").blur(function(){
+	$(".login_txt").on("blur",function(){
 		$(this).removeClass("focus");
 	});
+	
+	
 	
 	$("#login_btn").click(function(e){
 		e = e||window.event;
@@ -41,11 +61,12 @@ $(function(){
 //		console.log($("#loginForm label"));
 //		console.log($("#tips").length);
 //		console.log($("#mlsUser").val());
-		if(!($("#loginForm label").length) && $("#mlsUser").val() && $("#tips").length==1){  //没有错误消息且都不为空  点击跳转到首页
+//!($("#loginForm label").length) && 
+		if($("#mlsUser").val() && $("#tips").length==1){  //没有错误消息且都不为空  点击跳转到首页
 			var nicknm = $("#mlsUser").val(); 
 			$.cookie("usermsg",nicknm,{expires:7,path:"/"});
 			location.href = "index.html";
-			//$("#nickname")
+			
 			//首页加载就判断cookie里是否有username项 如果有就隐藏登陆注册相关按钮 且显示用户信息 如果没有就直接加载首页
 		}
 		

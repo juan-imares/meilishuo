@@ -5,6 +5,30 @@ a {
 a:hover{
 	color: #f69;
 }
+#mylike .myLikeNum{
+	color: #fff;
+	background-color: #ff6497;
+	padding: 0 6px;
+}
+#logout{
+	position: absolute;
+	top: 31px;
+	left: 380px;
+	width: 100px;
+	height: 60px;
+	background: #fff;
+	border: 1px solid #efefff;
+	display: none;
+}
+#logout b{
+	display: block;
+	text-align: center;
+	line-height: 20px;
+	cursor: pointer;
+}
+#logout b:hover{
+	background: #efefef;
+}
 #nav{
 	height: 50px;
 }
@@ -31,9 +55,6 @@ a:hover{
 	float: left;
 	background: url(../img/border/border.png) no-repeat right center;
 	padding: 0 15px;
-}
-#com-topbar li a:hover{
-	color: #f69;
 }
 /*下载客户端*/
 #com-topbar .app {
@@ -72,9 +93,6 @@ h1{
 	width: 360px;
 	float: left;
 	margin-top: 40px;
-}
-#nav h1{
-	
 }
 .search{
 	width: 45%;
@@ -125,7 +143,7 @@ h1{
 	font-size: 20px;
 	position: absolute;
 	top: 31px;
-	left: 475px;
+	left: 435px;
 	cursor: pointer;
 }
 .weixin{
@@ -377,11 +395,6 @@ h1{
     height: 108px;
     width: 36px;
 }
-.relative-div .vertical-font {
-    width: 12px;
-    margin-left: 13px;
-    margin-top: 5px;
-}
 .relative-div .cart-im-panel #side-cart .red-cart {
     background: url("../img/bg/red_cart.png") no-repeat;
     width: 17px;
@@ -400,6 +413,7 @@ h1{
 .relative-div .cart-im-panel #side-cart:hover .red-cart .cart-num{
 	background-color: #000;
 	color: #000;
+	
 }
 .relative-div .cart-im-panel #side-cart .white-cart {
     background: url("../img/bg/white_cart.png") no-repeat;
@@ -674,6 +688,7 @@ li.lastLou{
 	left: -12px;
 	border-radius: 10px;
 	color: #fff;
+	z-index: 500;
 }
 /*用户头像*/
 #username img{
@@ -701,4 +716,38 @@ li.lastLou{
 #mylike{
 	
 	display: none;
+}
+#checkCart{
+	width: 180px;
+	height: 40px;
+	padding: 20px 20px 50px 20px;
+	border: 1px solid #efefef;
+	background: #fefefe;
+	position: absolute;
+	top: 90px;
+	right: 32px;
+	opacity: .8;
+}
+#checkCart:hover{
+	opacity: 1;
+}
+#checkCart p{
+	float: right;
+	line-height: 30px;
+}
+#checkCart #close{
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	cursor: pointer;
+	width: 15px;
+	height: 15px;
+	text-align: center;
+	line-height: 15px;
+}
+#checkCart #close:hover{
+	background: #f69;
+	color: #fff;
+	opacity: .6;
+	border-radius: 50%;
 }

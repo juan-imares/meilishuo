@@ -1,5 +1,5 @@
 /*引入html代码片段*/
-function loadHtml(url,target){
+;function loadHtml(url,target){
 	$.ajax({
 		url:url,
 		dataType:"html",
@@ -16,7 +16,7 @@ $(window).scroll(function(){
 	if (scTop>=$(".header_bg").height()) {
 		$("#nav").addClass("fixed");          //导航栏
 		$("body").css({"marginTop":"50px"}); //吸顶时设置body的上边距
-		$("#go2top").css("display","block");  //返回顶部
+		$("#go2top").css("display","block");  //显示返回顶部
 		$("#loutiwrap").css("display","block"); //楼梯
 	}else{
 		$("#nav").removeClass("fixed");
@@ -58,3 +58,40 @@ $(window).on("scroll",function(){
     }
 
 });
+/*进入购物车时 若没有登录就进入登录界面*/
+$("#toMyCarts").click(function(){
+	if(!($.cookie("usermsg"))){
+//		location.href = "login.html";
+		alert("您还没有登录哦");
+	}
+});
+
+/*退出登录*/
+/*$("#username a").mouseover(function(){
+	console.log(666);
+	$("#logout").css({"display":"block"});
+});
+$("#username").mouseout(function(){
+	$("#logout").hide();
+});
+$("#logoutBtn").click(function(){
+	$("#username").css({"display":"none"});
+	$("#messg").css({"display":"none"});
+	$("#mylike").css({"display":"none"});
+	$("#login_qq").show();
+	$("#login_weichat").show();
+	$("#login").show();
+	$("#register").show();
+	$.cookie("usermsg","lala",{expires:-1,path:"/"});
+});*/
+/*关闭购物车*/
+$("#close").click(function(){
+	alert(1);
+	$("#checkCart").css({"display":"none"});
+});
+$("#side-cart").mouseover(function(){
+	$("#checkCart").css({"display":"block"});
+});
+$("#side-cart").mouseout(function(){
+	$("#checkCart").css({"display":"none"});
+})

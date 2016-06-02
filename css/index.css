@@ -13,15 +13,21 @@
     /*width: 100%;*/
     width: 3000px;
     z-index: 0;
+    position:relative;
 }
 .banner li{
-    float: left;
+	position: absolute;
+	top:0;
+	left:0;
+    /*float: left;*/
+    
 }
 /*------------------轮播小按钮-----------------------*/
 .top_bnr .bnr_btn{
     position: absolute;
     top: 380px;
     left: 440px;
+    z-index: 400;
 }
 .top_bnr .bnr_btn a{
     display: inline-block;
@@ -51,6 +57,7 @@
     height: 44px;
     background: url("../img/bg/bnr_btn_left1.png") no-repeat center;
     cursor: pointer;
+    z-index: 400;
 }
 .bnr_btn_lr .bnr_btn_r{
     position: absolute;
@@ -60,6 +67,7 @@
     height: 44px;
     background: url("../img/bg/bnr_btn_right1.png") no-repeat center;
     cursor: pointer;
+    z-index: 400;
 }
 /*---------------------二级菜单------------------*/
 .corner1{
@@ -118,7 +126,6 @@
     padding-right: 20px;
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
-    /*border-right: none;*/
 }
 .top_wrap .menu_box .sec_menu .list_cont {
     position: relative;
@@ -233,15 +240,20 @@
 }
 .module .tit .operate {
     background: url("../img/bg/bg_tri.png") no-repeat 101% -177px;
-    padding: 18px 10px 0 0;
+    padding: 21px 10px 0 0;
     color: #999;
     text-align: right;
     border-bottom: 1px solid #ededed;
+    position: relative;
+    
 }
 .module .cont a {
     float: left;
 }
 .module .tit .operate a{
+	position: absolute;
+	top: 5px;
+	right: 8px;
     float: right;
 }
 .fashion .tit .operate {
@@ -290,6 +302,7 @@
     background: url("../img/bg/bg_tri.png") no-repeat 0 -23px;
     color: #999;
     float: right;
+    cursor: pointer;
 }
 /*时尚美妆*/
 .beauty .item{

@@ -367,6 +367,7 @@ i {
 }
 .add_cart:hover,.buy_btn:hover{
 	color: #fff;
+	text-decoration: none;
 }
 .cartico {
     background-position: -62px -36px;

@@ -25,6 +25,38 @@
 		$(".cart-num").html(goods.cat.num);
 	}
 	
+	
+	/*退出登录*/
+	$("#username").mouseover(function(){
+	//	console.log(666);
+		$("#logout").css({"display":"block"});
+	});
+	$("#username").mouseout(function(){
+		$("#logout").hide();
+	});
+	$("#logoutBtn").click(function(){
+		$("#username").css({"display":"none"});
+		$("#messg").css({"display":"none"});
+		$("#mylike").css({"display":"none"});
+		$("#login_qq").show();
+		$("#login_weichat").show();
+		$("#login").show();
+		$("#register").show();
+		$.cookie("usermsg","lala",{expires:-1,path:"/"});
+	});
+	
+	/*喜欢 +1 on委托*/
+	$(".cont").on("click",".like",function(){
+		if($.cookie("usermsg")){
+			$(this).text(parseInt($(this).text())+1);
+			$(".myLikeNum").text(parseInt($(".myLikeNum").text())+1);
+		}else{
+			if(confirm("还没有登陆哦~去登陆吧~")){
+				location.href = "login.html";
+			}
+		}
+	})
+
 });
 
 /*导航栏点击事件*/
@@ -50,7 +82,7 @@ $("#com-topbar  .drop").mouseout(function(){
         "display":"none"
     });
 });
-/*------------------------------------导航栏 更多 下拉-------------------------------*/
+/*-------------------------------导航栏 更多 下拉---------------------*/
 $("#def-nav .drop").mouseover(function(){
     $("#def-nav .down").css({
         "display":"block",
@@ -63,16 +95,17 @@ $("#def-nav .drop").mouseout(function(){
         "display":"none"
     });
 });
-/*-------------------底部滚动-------锟阶诧拷 li 锟斤拷时锟斤拷锟斤拷--------------*/
+/*-------------------底部滚动-------------------*/
 var _this = $(".link-slide").first();
-var lineH=_this.find("li:first").height(); //锟斤拷取锟叫革拷
-var upHeight=0-1*lineH; //锟斤拷锟斤拷锟竭讹拷
+var lineH=_this.find("li:first").outerHeight()+3; 
+var upHeight=0-1*lineH; 
 function scrollGun(){
-    _this.animate({
+    _this.stop().animate({
         marginTop:upHeight
     },500,function(){
-        _this.find("li:first").appendTo(_this);  //目锟斤拷锟狡ワ拷锟揭伙拷锟皆�拷锟斤拷锟斤拷贫锟�目锟斤拷锟狡ワ拷锟斤拷锟皆�拷锟皆��拷乇锟斤拷锟�锟斤拷锟狡碉拷锟斤拷匹锟斤拷目锟斤拷
-        _this.css({marginTop:0});
+        _this.find("li:first").appendTo(_this);  //找到第一个
+        //_this.css({marginTop:0});
+        _this.stop().animate({marginTop:0},500);
     });
 }
 /*----------底部 滚动---------*/
@@ -87,11 +120,13 @@ $(".sec_menu").find("li").on("mouseover",function(){
     $(this).find("div").find("i").removeClass("corner1").addClass("corner2");
     //$(".sec_menu .list").find(".list_cont").append("<div class='.menuBorder'></div>");
     $(".sec_menu .list").removeClass("active"), $(this).addClass("active"), $(this).children(".thir_menu").show();
+    $(this).css({"height":$(this).outerHeight-2 + "px"});
 });
 $(".sec_menu").find("li").on("mouseout",function(){
     $(this).find("div").find("i").removeClass("corner2").addClass("corner1");
     //$(".sec_menu .list").find(".list_cont").remove("<div class='.menuBorder'></div>");
     $(".sec_menu .list").removeClass("active"), $(this).removeClass("active"), $(this).children(".thir_menu").hide();
+    $(this).css({"height":$(this).outerHeight+2 + "px"});
 });
 
 /*-------------------------------轮播图---------------------------------*/
@@ -114,10 +149,10 @@ var count = $(".banner li").length; //count = 3
 $(".bnr_btn a").click(function(e){
     e = e || window.event;
     e.preventDefault();
-    var index = $(this).attr("ind");
+    var index = $(this).attr("ind"); //自定义属性
     n = index;
     $(this).addClass("on").siblings().removeClass("on");
-   // $(".banner li:not(:first-child)").hide();
+    //$(".banner li").filter(":visible").fadeOut(300).parent().children().eq(n).fadeIn(500);
 });
 function bannerMove(){
     n = n>=count-1 ? 0 : ++n;  //0 -> 1
@@ -272,11 +307,11 @@ $.ajax({
         }
     }
 });
-var urlIndex = 2;
+var urlIndex = 1;
 $(".guess_like .tit .change").on("click",function(){
-	//if(urlIndex==1){urlIndex=2;}
+	if(urlIndex==3){urlIndex=1;}
 	var url_like = "../data/guessLike"+urlIndex+".json";
-	//urlIndex--;
+	urlIndex++;
 	$.ajax({
     type:"get",
     url:url_like,
@@ -297,6 +332,9 @@ $(".guess_like .tit .change").on("click",function(){
         }
     }
 });
+
+
+
 })
 
 

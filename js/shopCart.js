@@ -67,10 +67,54 @@
 			});
 			var totalPrice = parseFloat(parseInt($("#cat .amount").val())*goods.cat.price).toFixed(2);
 			$("#cat .goods_total").text(totalPrice);
+			
 			/*全选按钮 反选*/
 			$("#select_all1").click(function(){
+				/*用attr不行 ， 尝试prop 是ok的，prop会返回true或者false*/
+				$(":checkbox").not(this).prop("checked",$(this).prop("checked"));
+				if($(".select_goods").prop("checked")){
+					$("span.total_price").text($("#cat .goods_total").text());
+					$(".check-goods-num").text($("input.amount").val());
+				}else{
+					$("span.total_price").text("0.00");
+					$(".check-goods-num").text(0);
+				}
+			});
+			$("#select_all2").click(function(){
 				
-			})
+				$(":checkbox").not(this).prop("checked",$(this).prop("checked"));
+				if($(".select_goods").prop("checked")){
+					$("span.total_price").text($("#cat .goods_total").text());
+					$(".check-goods-num").text($("input.amount").val());
+				}else{
+					$("span.total_price").text("0.00");
+					$(".check-goods-num").text(0);
+				}
+			});
+			
+			/*若.select_goods 为checked 计算总价 并把总价格填入span.total_price*/
+			$(".select_goods").click(function(){
+				if($(".select_goods").prop("checked")){
+					$("span.total_price").text($("#cat .goods_total").text());
+					$(".check-goods-num").text($("input.amount").val());
+				}else{
+					$("span.total_price").text("0.00");
+					$(".check-goods-num").text(0);
+				}
+			});
+			
+			/*删除订单*/
+			$("a.del").click(function(){
+				if(confirm("您不要这件宝贝了吗？")){
+					$(".cart table tbody").eq(0).remove();
+					/*清除cookie里面的carts id为cat的数据*/
+					$.cookie("carts","bye",{expires:-1,path:"/"});
+					
+					$(".emptyTip").css({"display":"block"});
+					$("#float_ctrl").hide();
+				}
+			});
+			
 		}else{
 			$("#float_ctrl").hide();
 			$(".emptyTip").css({"display":"block"});

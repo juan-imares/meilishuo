@@ -55,13 +55,25 @@ $(function(){
 	$("#reg_btn").click(function(e){
 		e = e||window.event;
 		e.preventDefault();
-		if(!($("#regForm label").length) && $("#mobile").val()){  //没有错误消息且都不为空  点击跳转到首页
+		//!($("#regForm label").length) && 
+		if($("#mobile").val()){  //没有错误消息且都不为空  点击跳转到首页
 			var nicknm = $("#nickname").val();
 			$.cookie("usermsg",nicknm,{expires:7,path:"/"});
-			location.href = "index.html";
+			location.href = "login.html";
 			//首页加载就判断cookie里是否有usermsg项 如果有就隐藏登陆注册相关按钮 且显示用户信息 如果没有就直接加载首页
 		}
 		
+	});
+	
+	/*用户名失去焦点时 验证是否存在这个用户*/
+	$("#nickname").on("blur",function(){
+		var loguserName = $("#nickname").val();
+		if($.cookie("usermsg")){
+			if(loguserName==$.cookie("usermsg")){
+				alert("昵称已存在~换一个吧~");
+			}
+			
+		}
 	});
 	
 })

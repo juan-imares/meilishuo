@@ -3,14 +3,24 @@
 	<div id="com-topbar">
 		<div class="inner clearfix">
 			<ul>
-				<li id="username"><a href="###"><img src="../img/register_login_bg/avat.jpg" alt="" /><!--填写用户昵称--></a></li>
+				<li id="username">
+					<a href="###">
+						<img src="../img/register_login_bg/avat.jpg" alt="" /><!--填写用户昵称-->
+					</a>
+					<i class="fa fa-caret-down"></i>
+					<div id="logout">
+						<b>个人中心</b>
+						<b>我的积分</b>
+						<b id="logoutBtn">退出</b>
+					</div>		
+				</li>
 				<li id="messg"><a href="###">消息<span class="msg-num">1</span></a></li>
-				<li id="mylike"><a href="###"><span>❤</span>我的喜欢</a></li>
+				<li id="mylike"><a href="###"><span>❤</span>我的喜欢<span class="myLikeNum">0</span></a></li>
 				<li id="login_qq"><a href="###"><i class="fa fa-wechat weixin"></i> 微信登陆</a></li>
 				<li id="login_weichat"><a href="###"><i class="fa fa-qq qq"></i> QQ登陆</a></li>
 				<li id="login"><a href="login.html" target="_blank">登陆</a></li>
 				<li id="register"><a href="regist.html" target="_blank">注册</a></li>
-				<li><a href="shopCart.html" target="_blank"><i class="fa fa-shopping-cart cart"></i>我的购物车</a><span class="cart-num">0</span></li>
+				<li><a id="toMyCarts" href="shopCart.html" target="_blank"><i class="fa fa-shopping-cart cart"></i>我的购物车</a><span class="cart-num">0</span></li>
 				<li><a href="###"><i class="fa fa-file-text-o dingdan"></i>我的订单</a></li>
 				<li><a href="###"><i class="fa fa-diamond"></i>美丽说会员</a></li>
 				<li class="drop"><a href="###"><i class="fa fa-mobile-phone mobile"></i>下载app<i class="fa fa-caret-down"></i></a>
@@ -24,6 +34,7 @@
 				</li>
 				<li style="background: none;"><a href="###">帮助中心</a></li>
 			</ul>
+			
 		</div>
 	</div>
 </div>
