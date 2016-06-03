@@ -33,7 +33,7 @@ $("#go2top").on("click",function(){
 $("#global-sidebar").hover(function () {
 	$(".relative-div .side-other").stop().animate({"left":"0px"});
 },function(){
-	$(".relative-div .side-other").stop().animate({"left":"34px"});
+	$(".relative-div .side-other").stop().animate({"left":"38px"});
 })
 
 /*楼梯*/
@@ -66,24 +66,6 @@ $("#toMyCarts").click(function(){
 	}
 });
 
-/*退出登录*/
-/*$("#username a").mouseover(function(){
-	console.log(666);
-	$("#logout").css({"display":"block"});
-});
-$("#username").mouseout(function(){
-	$("#logout").hide();
-});
-$("#logoutBtn").click(function(){
-	$("#username").css({"display":"none"});
-	$("#messg").css({"display":"none"});
-	$("#mylike").css({"display":"none"});
-	$("#login_qq").show();
-	$("#login_weichat").show();
-	$("#login").show();
-	$("#register").show();
-	$.cookie("usermsg","lala",{expires:-1,path:"/"});
-});*/
 /*关闭购物车*/
 $("#close").click(function(){
 	alert(1);
