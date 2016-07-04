@@ -13,7 +13,7 @@ a:hover{
 #logout{
 	position: absolute;
 	top: 31px;
-	left: 380px;
+	left: 465px;
 	width: 100px;
 	height: 60px;
 	background: #fff;
@@ -61,6 +61,9 @@ a:hover{
     text-align: left;
     width: 240px;
     padding-top: 5px;
+	display: none;
+	top: 31px;
+	left: 1100px;
 }
 #com-topbar .down {
     position: absolute;
@@ -172,7 +175,7 @@ h1{
 	margin-right: 4px;
 }
 
-/*导航*/
+/*-------------------导航-----------------*/
 #nav {
 	border-bottom: 1px solid #f69;
 }
@@ -217,7 +220,7 @@ h1{
 	top: 0;
 }
 
-/*底部*/
+/*------------------------底部-----------------------*/
 #foot{
 	width: 100%;
 	/*min-width: 1260px;*/
@@ -349,9 +352,9 @@ h1{
     margin: 0;
 }
 
-/*----------侧边栏------*/
+/*---------------侧边栏-----------*/
 #global-sidebar {
-    width: 32px;
+    width: 38px;
     height: 100%;
     position: fixed;
     right: 0;
@@ -370,21 +373,12 @@ h1{
     position: relative;
     min-height: 260px;
     float: right;
-    margin-right: 32px;
+    margin-right: 38px;
 }
-/*.relative-div .show-other {
-    left: 0;
-}*/
-/*.relative-div .slide-out {
-    animation: slideOut 0.5s forwards;
-    -moz-animation: slideOut 0.5s forwards;
-    -webkit-animation: slideOut 0.5s forwards;
-    -o-animation: slideOut 0.5s forwards;
-}*/
 .relative-div .side-other {
     height: 100%;
     position: absolute;
-    left: 32px;   /*38px*/
+    left: 38px;   /*38px*/
 }
 .relative-div .cart-im-panel .cart-im-box {
     position: absolute;
@@ -403,7 +397,7 @@ h1{
     margin-left: 10px;
     position: relative;
 }
-/*购物车*/
+/*-----------------购物车----------------*/
 .relative-div .cart-im-panel #side-cart:hover .white-cart {
     display: block;
 }
@@ -574,7 +568,7 @@ em {
 }
 
 
-/*返回顶部*/
+/*----------------------返回顶部------------------*/
 .relative-div .side-go2top-panel {
     z-index: 256;
     position: absolute;
@@ -625,7 +619,7 @@ em {
     border-right: 1px solid #ddd;
     background-color: #f6f6f6;
 }
-/*楼梯*/
+/*----------------楼梯---------------------*/
 #loutiwrap{
 	display: none;
 }
@@ -667,7 +661,7 @@ em {
 li.lastLou{
 	border: none;
 }
-/*加入购物车成功*/
+/*----------------加入购物车成功-----------------*/
 #msg{
 	position:absolute; 
 	top:0px; 
@@ -690,7 +684,7 @@ li.lastLou{
 	color: #fff;
 	z-index: 500;
 }
-/*用户头像*/
+/*---------------用户头像-------------------*/
 #username img{
 	vertical-align: middle;
 	height: 19px;
@@ -698,7 +692,7 @@ li.lastLou{
 	border-radius: 9px;
 	padding-right: 2px;
 }
-/*我的喜欢*/
+/*--------------------我的喜欢--------------------*/
 #com-topbar .msg-num {
     color: #fff;
     background-color: #ff6497;

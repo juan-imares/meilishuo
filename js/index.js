@@ -24,16 +24,19 @@
 		var goods = JSON.parse($.cookie("carts"));
 		$(".cart-num").html(goods.cat.num);
 	}
-	
-	
-	/*退出登录*/
-	$("#username").mouseover(function(){
-	//	console.log(666);
+
+	/*------------------------------退出登录-------------------------*/
+    $("#username").hover(function(){
+        $("#logout").css({"display":"block"});
+    },function(){
+        $("#logout").hide();
+    });
+	/*$("#username").mouseover(function(){
 		$("#logout").css({"display":"block"});
 	});
 	$("#username").mouseout(function(){
 		$("#logout").hide();
-	});
+	});*/
 	$("#logoutBtn").click(function(){
 		$("#username").css({"display":"none"});
 		$("#messg").css({"display":"none"});
@@ -42,10 +45,11 @@
 		$("#login_weichat").show();
 		$("#login").show();
 		$("#register").show();
+        /*清除cookie里的用户信息*/
 		$.cookie("usermsg","lala",{expires:-1,path:"/"});
 	});
 	
-	/*喜欢 +1 on委托*/
+	/*-------------------------喜欢 +1 on委托-------------------------*/
 	$(".cont").on("click",".like",function(){
 		if($.cookie("usermsg")){
 			$(this).text(parseInt($(this).text())+1);
@@ -55,16 +59,16 @@
 				location.href = "login.html";
 			}
 		}
-	})
+	});
 
 });
 
-/*导航栏点击事件*/
+/*-----------------------------导航栏点击事件-------------------------*/
 $("#com-nav .navList").children().not("#com-nav .navList .hifan").children().not(".down").on("click",function(){
 	$(this).addClass("active").siblings().removeClass("active");
 	
 })
-/*返回顶部*/
+/*---------------------------------返回顶部---------------------------*/
 ;$("#go2top").on("click",function(){
     $("html,body").animate({scrollTop:0},800);
 });
@@ -74,7 +78,7 @@ $("#com-topbar .drop").mouseover(function(){
     $("#com-topbar .down").css({
         "display":"block",
         "top":"31px",
-        "left":"1000px"
+        "left":"1085px"
     });
 });
 $("#com-topbar  .drop").mouseout(function(){
@@ -95,7 +99,7 @@ $("#def-nav .drop").mouseout(function(){
         "display":"none"
     });
 });
-/*-------------------底部滚动-------------------*/
+/*-----------------------底部滚动----------------------*/
 var _this = $(".link-slide").first();
 var lineH=_this.find("li:first").outerHeight()+3; 
 var upHeight=0-1*lineH; 
@@ -108,7 +112,6 @@ function scrollGun(){
         _this.stop().animate({marginTop:0},500);
     });
 }
-/*----------底部 滚动---------*/
 setInterval(function(){
     scrollGun();    //滚动
 },3000);
@@ -129,7 +132,7 @@ $(".sec_menu").find("li").on("mouseout",function(){
     $(this).css({"height":$(this).outerHeight+2 + "px"});
 });
 
-/*-------------------------------轮播图---------------------------------*/
+/*-------------------------------轮播图-------------------------------*/
 /*引入轮播图片*/
 $.ajax({
     type:"get",
@@ -142,7 +145,8 @@ $.ajax({
             j++;
         }
     }
-})
+});
+/*开始轮播*/
 var timer = setInterval("bannerMove()",3000);
 var n=0;
 var count = $(".banner li").length; //count = 3
@@ -152,12 +156,10 @@ $(".bnr_btn a").click(function(e){
     var index = $(this).attr("ind"); //自定义属性
     n = index;
     $(this).addClass("on").siblings().removeClass("on");
-    //$(".banner li").filter(":visible").fadeOut(300).parent().children().eq(n).fadeIn(500);
 });
 function bannerMove(){
     n = n>=count-1 ? 0 : ++n;  //0 -> 1
     $(".banner li").filter(":visible").fadeOut(300).parent().children().eq(n).fadeIn(500);
-    //$(".banner li").filter(":visible").fadeTo(300,0).parent().children().eq(n).fadeTo(500,0.66);
     $(".bnr_btn a").eq(n).addClass("on").siblings().removeClass("on");
 }
 //轮播图 鼠标移入暂停 移出继续
@@ -170,17 +172,15 @@ $(".banner_wrap").hover(function(){
 });
 //轮播图 左侧按钮
 $(".bnr_btn_l").click(function() {
-    $(".banner li").eq(n).fadeOut(300);
-    $(".banner li").eq(n-1).fadeIn(500);
-    $(".bnr_btn a").eq(n-1).addClass("on").siblings().removeClass("on");
-    n = n-1;
+    n =  n<=0 ? 2 : --n;
+    $(".banner li").filter(":visible").fadeOut(300).parent().children().eq(n).fadeIn(500);
+    $(".bnr_btn a").eq(n).addClass("on").siblings().removeClass("on");
 });
 //轮播图 右侧按钮
 $(".bnr_btn_r").click(function(){
-    $(".banner li").eq(n).fadeOut(300);
-    $(".banner li").eq(n+1).fadeIn(500);
-    $(".bnr_btn a").eq(n+1).addClass("on").siblings().removeClass("on");
-    n = n+1;
+    n = n>=count-1 ? 0 : ++n;
+    $(".banner li").filter(":visible").fadeOut(300).parent().children().eq(n).fadeIn(500);
+    $(".bnr_btn a").eq(n).addClass("on").siblings().removeClass("on");
 });
 /*主体内容 fashion*/
 $.ajax({
@@ -192,7 +192,7 @@ $.ajax({
         }
     }
 })
-/*fashion_new*/
+/*fashion_new 加载商品信息*/
 $.ajax({
     type:"get",
     url:"../data/fashion_new.json",
@@ -210,7 +210,7 @@ $.ajax({
         }
     }
 });
-/*beauty*/
+/*beauty  加载商品信息*/
 $.ajax({
     type:"get",
     url:"../data/beauty.json",
@@ -232,7 +232,7 @@ $.ajax({
         }
     }
 });
-/*hi范儿 引入图片*/
+/*hi范儿 加载商品信息*/
 $.ajax({
     type:"get",
     url:"../data/hifan.json",
@@ -252,7 +252,7 @@ $(".hifan .cont ul li").on("click",function(){
 	$(this).addClass("active").siblings().removeClass("active");
 	$(".hifan .tab-item").eq($(this).index()).addClass("active").siblings().removeClass("active");
 });
-/*好店推荐 导入数据*/
+/*好店推荐 加载商品信息*/
 $.ajax({
     type:"get",
     url:"../data/recoShop.json",
@@ -289,7 +289,7 @@ $(".unadd").hover(function(){
 	$(this).html("已关注");
 });
 
-/*猜你喜欢*/
+/*猜你喜欢  加载商品信息*/
 $.ajax({
     type:"get",
     url:"../data/guessLike.json",
@@ -332,8 +332,6 @@ $(".guess_like .tit .change").on("click",function(){
         }
     }
 });
-
-
 
 })
 

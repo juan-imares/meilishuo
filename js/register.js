@@ -55,8 +55,8 @@ $(function(){
 	$("#reg_btn").click(function(e){
 		e = e||window.event;
 		e.preventDefault();
-		//!($("#regForm label").length) && 
-		if($("#mobile").val()){  //没有错误消息且都不为空  点击跳转到首页
+		//问题：出现错误消息 再输入正确格式 也不能正确跳转 除非刷新后一次填写正确
+		if(!($("#regForm label").length) && $("#mobile").val()){  //没有错误消息且都不为空  点击跳转到首页
 			var nicknm = $("#nickname").val();
 			$.cookie("usermsg",nicknm,{expires:7,path:"/"});
 			location.href = "login.html";
