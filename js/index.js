@@ -1,5 +1,6 @@
 ;$(function(){	
 	//首页加载就判断cookie里是否有usermsg项 如果有就隐藏登陆注册相关按钮 且显示用户信息 如果没有就直接加载首页
+	//设置全局
 	if($.cookie("usermsg")){
 		$("#username a").append($.cookie("usermsg"));
 		$("#login_qq").css({"display":"none"});
@@ -24,6 +25,7 @@
 		var goods = JSON.parse($.cookie("carts"));
 		$(".cart-num").html(goods.cat.num);
 	}
+	
 
 	/*------------------------------退出登录-------------------------*/
     $("#username").hover(function(){
