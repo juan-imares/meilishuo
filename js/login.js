@@ -1,6 +1,6 @@
 $(function(){
 	
-	/*用户名失去焦点时 验证是否存在这个用户*/
+	/*用户名失去焦点时 验证是否存在这个用户!*/
 	$("#mlsUser").on("blur",function(){
 		var loguserName = $("#mlsUser").val();
 		if($.cookie("usermsg")){
